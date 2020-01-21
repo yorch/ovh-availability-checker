@@ -10,5 +10,5 @@ before_install:
 
 script:
   - docker run -d yorch/ovh-availability-checker ovh-availability-checker
-  - docker ps -a
   - docker logs ovh-availability-checker
+  - docker ps -a
