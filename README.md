@@ -1,6 +1,6 @@
-# OVH Servers Availability Checker
+# OVH Availability Checker
 
-This is a NodeJS application that checks for the availability of OVH / Kimsufi / SoYouStart servers (according to `servers.json` config file) and if they are available, it can trigger:
+This is a NodeJS application that checks for the availability of OVH / Kimsufi / SoYouStart servers (according to `servers.json` config file) and if they are in stock, it can trigger:
 * An email through a configured SMTP server.
 * An SMS message through Twilio.
 * A PushBullet notification.
@@ -8,7 +8,7 @@ This is a NodeJS application that checks for the availability of OVH / Kimsufi /
 ## Configuration
 
 All the configuration can be made through two files:
-* `.env` -> Where all the credentials and other config are stored (ie: SMTP, Twilio API, Pushbullet, etc).
+* `.env` -> Where all the credentials and other config are stored (ie: SMTP, Twilio API, Pushbullet, etc). Create your own `.env` file from `.env.sample`.
 * `servers.json` -> Where you can add the OVH / Kimsufi / SoYouStart servers you want to monitor.
 
 ## Run with NodeJS
@@ -27,3 +27,9 @@ yarn start
 ```bash
 docker-compose up -d
 ```
+
+## License
+
+MIT - Jorge Barnaby
+
+See [LICENSE](LICENSE)
