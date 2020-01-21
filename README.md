@@ -34,6 +34,8 @@ You can easily use it out of the box and run it in a headless server like a chea
 
 ## License
 
-MIT - Jorge Barnaby
+MIT License
+
+Copyright (c) 2020 Jorge Barnaby
 
 See [LICENSE](LICENSE)
