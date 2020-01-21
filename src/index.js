@@ -6,6 +6,11 @@ const { sendEmail, sendPushbullet, sendSms } = require('./actions');
 const { availabilityUrl, cronSchedule } = require('./config');
 const serversToCheck = require('../servers.json');
 
+if (!availabilityUrl) {
+    logger.info('No availabilityUrl configured, exiting');
+    return;
+}
+
 const availabilityChecker = new AvailabilityChecker({
     actions: [
         sendEmail,

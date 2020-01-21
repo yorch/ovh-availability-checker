@@ -7,5 +7,7 @@ services:
 
 before_install:
   - docker build -t yorch/ovh-availability-checker .
+
+script:
   - docker run -d yorch/ovh-availability-checker
   - docker ps -a
