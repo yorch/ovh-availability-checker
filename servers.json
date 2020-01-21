@@ -1,0 +1,54 @@
+{
+  "1801sk16": {
+    "enable": false,
+    "name": "KS-5",
+    "price": "$16.99",
+    "ram": "16GB DDR3 1333 MHz",
+    "cpu": "AMD Opteron 4122 2.2GHz (4c/4t)",
+    "disk": "2TB",
+    "network": "100Mpbs",
+    "datacenters": [
+      "gra",
+      "rbx",
+      "sbg"
+    ]
+  },
+  "1804sk16": {
+    "enable": true,
+    "name": "KS-5",
+    "price": "$16.99",
+    "ram": "16GB DDR3 1333 MHz",
+    "cpu": "AMD Opteron 4122 2.2GHz (4c/4t)",
+    "disk": "2TB",
+    "network": "100Mpbs",
+    "datacenters": [
+      "bhs"
+    ]
+  },
+  "1801sk20": {
+    "enable": false,
+    "name": "KS-9",
+    "price": "$20.99",
+    "ram": "16GB DDR3 ECC 1333 MHz",
+    "cpu": "Intel Xeon W3520 2.66GHz (4c/8t)",
+    "disk": "SoftRaid 2x240Go SSD",
+    "network": "100Mpbs",
+    "datacenters": [
+      "gra",
+      "rbx",
+      "sbg"
+    ]
+  },
+  "1804sk20": {
+    "enable": true,
+    "name": "KS-9",
+    "price": "$20.99",
+    "ram": "16GB DDR3 ECC 1333 MHz",
+    "cpu": "Intel Xeon W3520 2.66GHz (4c/8t)",
+    "disk": "SoftRaid 2x240Go SSD",
+    "network": "100Mpbs",
+    "datacenters": [
+      "bhs"
+    ]
+  }
+}
