@@ -12,11 +12,7 @@ if (!availabilityUrl) {
 }
 
 const availabilityChecker = new AvailabilityChecker({
-    actions: [
-        sendEmail,
-        sendPushbullet,
-        sendSms,
-    ],
+    actions: [sendEmail, sendPushbullet, sendSms],
     logger,
     serversToCheck,
     url: availabilityUrl

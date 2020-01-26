@@ -8,16 +8,17 @@ class AvailabilityChecker {
     constructor({ actions, logger, serversToCheck, url }) {
         this.actions = actions;
         this.logger = logger;
-        this.serversToCheck = Object
-            .entries(serversToCheck)
-            .reduce((acc, [ key, { enable, ...rest } ]) => {
+        this.serversToCheck = Object.entries(serversToCheck).reduce(
+            (acc, [key, { enable, ...rest }]) => {
                 if (enable === true) {
                     return {
                         ...acc,
                         [key]: rest
                     };
                 }
-            }, {});
+            },
+            {}
+        );
         this.url = url;
 
         this.logger.debug('Servers to check', this.serversToCheck);
@@ -27,9 +28,15 @@ class AvailabilityChecker {
         const start = new Date();
         this.logger.info(`Obtaining availability from ${this.url}`);
         const body = await got(this.url).json();
-        this.logger.info(`Got response in ${(new Date() - start)/1000} secs (length: ${body.length} chars)`);
+        this.logger.info(
+            `Got response in ${(new Date() - start) / 1000} secs (length: ${
+                body.length
+            } chars)`
+        );
         const grouped = groupBy(
-            body.filter(({ hardware }) => Object.keys(this.serversToCheck).includes(hardware)),
+            body.filter(({ hardware }) =>
+                Object.keys(this.serversToCheck).includes(hardware)
+            ),
             'hardware'
         );
 
@@ -38,14 +45,19 @@ class AvailabilityChecker {
 
     _processAvailabilityResponse(response) {
         const servers = Object.entries(this.serversToCheck);
-        const getAvailability = (availabilityPerCode) => (availabilityPerCode || []).map(pick(['datacenters', 'region']));
+        const getAvailability = (availabilityPerCode) =>
+            (availabilityPerCode || []).map(pick(['datacenters', 'region']));
         const processAvailability = (availabilityPerCode) => {
             const availability = getAvailability(availabilityPerCode);
-            const datacenters = [].concat(...availability.map(({ datacenters }) => datacenters));
+            const datacenters = [].concat(
+                ...availability.map(({ datacenters }) => datacenters)
+            );
             return {
                 availability,
                 availableIn: datacenters
-                    .filter(({ availability }) => availability !== 'unavailable')
+                    .filter(
+                        ({ availability }) => availability !== 'unavailable'
+                    )
                     .map(({ datacenter }) => datacenter),
                 datacenters
             };
@@ -59,11 +71,10 @@ class AvailabilityChecker {
 
     _composeMessages(serversAvailable) {
         return [].concat(
-            ...serversAvailable
-                .map(
-                    ({ availableIn, datacenters, name, cpu, ram, disk, price }) =>
-                        availableIn.map(
-                            (dc) => oneLine`
+            ...serversAvailable.map(
+                ({ availableIn, datacenters, name, cpu, ram, disk, price }) =>
+                    availableIn.map(
+                        (dc) => oneLine`
                                 ${name}
                                 (DC: ${dc}):
                                 ${cpu},
@@ -73,18 +84,27 @@ class AvailabilityChecker {
                                 ${price}
                                 (
                                     availability:
-                                    ${datacenters.find(({ datacenter }) => datacenter === dc).availability}
+                                    ${
+                                        datacenters.find(
+                                            ({ datacenter }) =>
+                                                datacenter === dc
+                                        ).availability
+                                    }
                                 )
                             `
-                        )
-                )
+                    )
+            )
         );
     }
 
     async run() {
         const availability = await this._obtainAvailability();
-        const processedAvailability = this._processAvailabilityResponse(availability);
-        const serversAvailable = processedAvailability.filter(({ availableIn }) => availableIn.length > 0);
+        const processedAvailability = this._processAvailabilityResponse(
+            availability
+        );
+        const serversAvailable = processedAvailability.filter(
+            ({ availableIn }) => availableIn.length > 0
+        );
         if (!serversAvailable || serversAvailable.length === 0) {
             this.logger.info('No available servers');
         } else {
@@ -123,7 +143,7 @@ class AvailabilityChecker {
         this.scheduledTask.destroy();
         this.scheduledTask = null;
     }
-};
+}
 
 module.exports = {
     AvailabilityChecker
