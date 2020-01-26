@@ -10,10 +10,7 @@ const { env } = process;
 
 const logger = createLogger({
     level: 'info',
-    format: combine(
-        timestamp(),
-        format.json()
-    ),
+    format: combine(timestamp(), format.json()),
     // defaultMeta: { service: serviceName },
     transports: [
         //
@@ -35,9 +32,11 @@ const logger = createLogger({
 // `${info.level}: ${info.message} JSON.stringify({ ...rest }) `
 //
 if (env.NODE_ENV !== 'production') {
-    logger.add(new transports.Console({
-        format: format.simple()
-    }));
+    logger.add(
+        new transports.Console({
+            format: format.simple()
+        })
+    );
 }
 
 module.exports = {
