@@ -4,6 +4,8 @@ const got = require('got');
 const { groupBy } = require('lodash');
 const { pick } = require('lodash/fp');
 
+const UNAVAILABLE_STATES = ['unavailable', 'unknown'];
+
 class AvailabilityChecker {
     constructor({ actions, logger, serversToCheck, url }) {
         this.actions = actions;
@@ -56,7 +58,8 @@ class AvailabilityChecker {
                 availability,
                 availableIn: datacenters
                     .filter(
-                        ({ availability }) => availability !== 'unavailable'
+                        ({ availability }) =>
+                            !UNAVAILABLE_STATES.includes(availability)
                     )
                     .map(({ datacenter }) => datacenter),
                 datacenters
