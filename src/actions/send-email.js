@@ -36,7 +36,7 @@ const sendEmail = async ({ content, logger }) => {
             // Preview only available when sending through an Ethereal account
             // logger.info(`Preview URL: ${nodemailer.getTestMessageUrl(info)}`);
             // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-        } catch(err) {
+        } catch (err) {
             logger.error(`Could not send the email`, err);
         }
     }

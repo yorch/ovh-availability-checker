@@ -7,11 +7,7 @@
     "cpu": "AMD Opteron 4122 2.2GHz (4c/4t)",
     "disk": "2TB",
     "network": "100Mpbs",
-    "datacenters": [
-      "gra",
-      "rbx",
-      "sbg"
-    ]
+    "datacenters": ["gra", "rbx", "sbg"]
   },
   "1804sk16": {
     "enable": true,
@@ -21,9 +17,7 @@
     "cpu": "AMD Opteron 4122 2.2GHz (4c/4t)",
     "disk": "2TB",
     "network": "100Mpbs",
-    "datacenters": [
-      "bhs"
-    ]
+    "datacenters": ["bhs"]
   },
   "1801sk20": {
     "enable": false,
@@ -33,11 +27,7 @@
     "cpu": "Intel Xeon W3520 2.66GHz (4c/8t)",
     "disk": "SoftRaid 2x240Go SSD",
     "network": "100Mpbs",
-    "datacenters": [
-      "gra",
-      "rbx",
-      "sbg"
-    ]
+    "datacenters": ["gra", "rbx", "sbg"]
   },
   "1804sk20": {
     "enable": true,
@@ -47,8 +37,6 @@
     "cpu": "Intel Xeon W3520 2.66GHz (4c/8t)",
     "disk": "SoftRaid 2x240Go SSD",
     "network": "100Mpbs",
-    "datacenters": [
-      "bhs"
-    ]
+    "datacenters": ["bhs"]
   }
 }

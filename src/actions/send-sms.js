@@ -24,7 +24,10 @@ const sendSms = ({ content, logger }) => {
         const sendSmsToNumber = async (phoneNumber) => {
             logger.info(`Trying to send to number '${phoneNumber}'`);
             try {
-                const { body: { status }, statusCode } = await got.post(
+                const {
+                    body: { status },
+                    statusCode
+                } = await got.post(
                     `https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`,
                     {
                         form: {
@@ -34,16 +37,21 @@ const sendSms = ({ content, logger }) => {
                             Body: content
                         },
                         headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded',
+                            'Content-Type': 'application/x-www-form-urlencoded'
                         },
                         username: sid,
                         password: secret,
                         responseType: 'json'
                     }
                 );
-                logger.info(`Sent SMS to number ${phoneNumber} successful (status ${statusCode} - ${status})`);
+                logger.info(
+                    `Sent SMS to number ${phoneNumber} successful (status ${statusCode} - ${status})`
+                );
             } catch (err) {
-                logger.error(`Could not send SMS to number ${phoneNumber}`, err);
+                logger.error(
+                    `Could not send SMS to number ${phoneNumber}`,
+                    err
+                );
             }
         };
 
