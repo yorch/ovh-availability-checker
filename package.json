@@ -3,6 +3,12 @@
   "version": "2.0.0",
   "description": "OVH Servers Availability Checker",
   "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "author": "Jorge Barnaby <jorge {dot} barnaby {at} gmail {dot} com",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com:yorch/ovh-availability-checker.git"
@@ -10,20 +16,14 @@
   "dependencies": {
     "common-tags": "1.8.0",
     "dotenv": "8.2.0",
-    "got": "10.5.5",
     "lodash": "4.17.15",
     "node-cron": "2.0.3",
     "nodemailer": "6.4.2",
     "pushbullet": "2.4.0",
+    "twilio": "3.39.4",
     "winston": "3.2.1"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ."
-  },
-  "author": "Jorge Barnaby <jorge {dot} barnaby {at} gmail {dot} com",
-  "license": "MIT",
   "engineStrict": true,
   "engines": {
     "node": ">= 10.0.0"

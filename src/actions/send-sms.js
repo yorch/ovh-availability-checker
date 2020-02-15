@@ -1,4 +1,3 @@
-const got = require('got');
 const {
     sms: {
         enable,
@@ -21,38 +20,36 @@ const sendSms = ({ content, logger }) => {
             return;
         }
 
-        const sendSmsToNumber = async (phoneNumber) => {
+        const client = new twilio(sid, secret, { accountSid });
+
+        const sendSmsToNumber = (phoneNumber) => {
             logger.info(`Trying to send to number '${phoneNumber}'`);
-            try {
-                const {
-                    body: { status },
-                    statusCode
-                } = await got.post(
-                    `https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`,
-                    {
-                        form: {
-                            To: phoneNumber.trim(),
-                            From: from,
-                            MessagingServiceSid: messagingServiceSid,
-                            Body: content
-                        },
-                        headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded'
-                        },
-                        username: sid,
-                        password: secret,
-                        responseType: 'json'
+            return client.messages
+                .create({
+                    body,
+                    to: phoneNumber.trim(),
+                    from
+                })
+                .then((message) => {
+                    const { errorCode, errorMessage, status, statusCode } = message;
+                    if (errorCode) {
+                        logger.error(
+                            `There was an error sending SMS to number ${phoneNumber} (${errorCode} - ${errorMessage})`
+                        )
+
+                    } else {
+                        logger.info(
+                            `Sent SMS to number '${phoneNumber}' successful (status ${statusCode} - ${status})`
+                        );
                     }
-                );
-                logger.info(
-                    `Sent SMS to number ${phoneNumber} successful (status ${statusCode} - ${status})`
-                );
-            } catch (err) {
-                logger.error(
-                    `Could not send SMS to number ${phoneNumber}`,
-                    err
-                );
-            }
+                    return message;
+                })
+                .catch((error) => {
+                    logger.error(
+                        `Could not send SMS to number '${phoneNumber}'`,
+                        error
+                    );
+                });
         };
 
         return Promise.all(recipients.map(sendSmsToNumber));
