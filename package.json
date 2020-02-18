@@ -9,10 +9,7 @@
   },
   "author": "Jorge Barnaby <jorge {dot} barnaby {at} gmail {dot} com",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:yorch/ovh-availability-checker.git"
-  },
+  "repository": "yorch/ovh-availability-checker",
   "dependencies": {
     "common-tags": "1.8.0",
     "dotenv": "8.2.0",
@@ -20,7 +17,7 @@
     "node-cron": "2.0.3",
     "nodemailer": "6.4.2",
     "pushbullet": "2.4.0",
-    "twilio": "3.39.4",
+    "simple-sms-sender": "0.0.3",
     "winston": "3.2.1"
   },
   "devDependencies": {},

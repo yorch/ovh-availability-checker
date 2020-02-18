@@ -698,6 +698,13 @@ semver@^5.6.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
   integrity sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==
 
+simple-sms-sender@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/simple-sms-sender/-/simple-sms-sender-0.0.3.tgz#9123cd8a0f0d50dd4ab704457c5587a5ae305e72"
+  integrity sha512-KHvoB5FoOlHCmBzZ72SAzmqqb1bthkp8P6JvO6/KDaMshyIMV/Nek02nSDUF94hjLNpWod79ij8mHhki/0/6Qw==
+  dependencies:
+    twilio "3.39.4"
+
 simple-swizzle@^0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/simple-swizzle/-/simple-swizzle-0.2.2.tgz#a4da6b635ffcccca33f70d17cb92592de95e557a"
