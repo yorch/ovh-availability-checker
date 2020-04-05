@@ -1,4 +1,8 @@
-# OVH Availability Checker [![Build Status](https://travis-ci.org/yorch/ovh-availability-checker.svg?branch=master)](https://travis-ci.org/yorch/ovh-availability-checker)
+# OVH Availability Checker
+
+[![Build Status](https://travis-ci.org/yorch/ovh-availability-checker.svg?branch=master)](https://travis-ci.org/yorch/ovh-availability-checker)
+[![](https://images.microbadger.com/badges/image/yorch/ovh-availability-checker.svg)](https://microbadger.com/images/yorch/ovh-availability-checker)
+[![](https://images.microbadger.com/badges/version/yorch/ovh-availability-checker.svg)](https://microbadger.com/images/yorch/ovh-availability-checker)
 
 This is a NodeJS application that checks for the availability of OVH / Kimsufi / SoYouStart servers (according to `servers.json` config file) and if they are in stock, it can trigger:
 
