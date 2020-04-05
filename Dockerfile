@@ -10,7 +10,8 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
 WORKDIR /app
 
 COPY package.json yarn.lock /app/
-RUN yarn install
+RUN yarn install --immutable \
+    && yarn cache clean
 COPY . /app
 
 ENV NODE_ENV production
