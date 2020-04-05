@@ -2,10 +2,11 @@
 
 # Docker Hub build hook: https://docs.docker.com/docker-hub/builds/advanced/
 
-# $IMAGE_NAME var is injected into the build so the tag is correct.
+# $IMAGE_NAME var is injected into the build so the tag is correct
+# $SOURCE_COMMIT has the full SHA of the git commit
 docker build \
     --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
-    --build-arg VCS_REF=$SOURCE_COMMIT \
+    --build-arg VCS_REF=`git rev-parse --short HEAD` \
     --build-arg VERSION=$SOURCE_BRANCH \
     -t $IMAGE_NAME \
     .
