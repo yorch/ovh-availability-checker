@@ -1,5 +1,20 @@
 FROM node:13-alpine
 
+ARG BUILD_DATE
+ARG VCS_REF
+ARG VERSION
+LABEL \
+    maintainer="jorge.barnaby@gmail.com" \
+    org.label-schema.build-date=$BUILD_DATE \
+    org.label-schema.name="OVH Servers Availability Checker" \
+    org.label-schema.description="Check if an OVH / Kimsufi / SoYouStart server is on stock or not" \
+    org.label-schema.url="https://github.com/yorch" \
+    org.label-schema.vcs-ref=$VCS_REF \
+    org.label-schema.vcs-url="https://github.com/yorch/ovh-availability-checker" \
+    org.label-schema.vendor="Barnaby Tech" \
+    org.label-schema.version=$VERSION \
+    org.label-schema.schema-version="1.0"
+
 RUN apk add --no-cache openssl
 
 ENV DOCKERIZE_VERSION v0.6.1
