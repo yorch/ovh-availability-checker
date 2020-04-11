@@ -1,4 +1,4 @@
-import { SmsSender } from 'simple-sms-sender';
+const { SmsSender } = require('simple-sms-sender');
 
 const {
     sms: {
@@ -22,7 +22,7 @@ const sendSms = ({ content, logger }) => {
     });
 
     return smsSender.sendSms({
-        body,
+        body: content,
         recipients: toNumber.split(',')
     });
 };
