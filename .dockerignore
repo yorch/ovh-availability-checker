@@ -1,3 +1,4 @@
+.env
+.git
 logs/
 node_modules/
-.env
