@@ -4,6 +4,7 @@ services:
   node:
     build: .
     container_name: ovh-availability-checker
+    restart: unless-stopped
     volumes:
       - logs:/app/logs
       - ./servers.json:/app/servers.json
