@@ -16,7 +16,7 @@
     "got": "11.2.0",
     "lodash": "4.17.15",
     "node-cron": "2.0.3",
-    "nodemailer": "6.4.6",
+    "nodemailer": "6.4.8",
     "pushbullet": "2.4.0",
     "simple-sms-sender": "0.0.3",
     "winston": "3.2.1"
