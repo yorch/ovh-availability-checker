@@ -1,6 +1,7 @@
 # OVH Availability Checker
 
 [![Build Status](https://travis-ci.org/yorch/ovh-availability-checker.svg?branch=master)](https://travis-ci.org/yorch/ovh-availability-checker)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=yorch/ovh-availability-checker)](https://dependabot.com)
 [![](https://images.microbadger.com/badges/image/yorch/ovh-availability-checker.svg)](https://microbadger.com/images/yorch/ovh-availability-checker)
 [![](https://images.microbadger.com/badges/version/yorch/ovh-availability-checker.svg)](https://microbadger.com/images/yorch/ovh-availability-checker)
 
