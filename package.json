@@ -14,7 +14,7 @@
     "common-tags": "1.8.0",
     "dotenv": "8.2.0",
     "got": "11.5.2",
-    "lodash": "4.17.19",
+    "lodash": "4.17.20",
     "node-cron": "2.0.3",
     "nodemailer": "6.4.11",
     "pushbullet": "2.4.0",
