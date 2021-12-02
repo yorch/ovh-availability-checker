@@ -23,16 +23,14 @@ class AvailabilityChecker {
         );
         this.url = url;
 
-        this.logger.info('Servers to check', this.serversToCheck);
+        this.logger.debug('Servers to check', this.serversToCheck);
     }
 
     async _obtainAvailability() {
         const start = new Date();
         this.logger.info(`Obtaining availability from ${this.url}`);
         const body = await got(this.url).json();
-        // this.logger.info(
-        //     `Got response raw data: ${JSON.stringify(body)}`
-        // );
+
         this.logger.info(
             `Got response in ${(new Date() - start) / 1000} secs (length: ${
                 body.length
