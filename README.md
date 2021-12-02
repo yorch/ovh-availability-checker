@@ -2,20 +2,19 @@
 
 [![Build Status](https://travis-ci.org/yorch/ovh-availability-checker.svg?branch=master)](https://travis-ci.org/yorch/ovh-availability-checker)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=yorch/ovh-availability-checker)](https://dependabot.com)
-[![](https://images.microbadger.com/badges/image/yorch/ovh-availability-checker.svg)](https://microbadger.com/images/yorch/ovh-availability-checker)
-[![](https://images.microbadger.com/badges/version/yorch/ovh-availability-checker.svg)](https://microbadger.com/images/yorch/ovh-availability-checker)
 
 This is a NodeJS application that checks for the availability of OVH / Kimsufi / SoYouStart servers (according to `servers.json` config file) and if they are in stock, it can trigger:
 
 -   An email through a configured SMTP server.
 -   An SMS message through Twilio.
 -   A PushBullet notification.
+-   Telegram notification.
 
 ## Configuration
 
 All the configuration can be made through two files:
 
--   `.env` -> Where all the credentials and other config are stored (ie: SMTP, Twilio API, Pushbullet, etc). Create your own `.env` file from `.env.sample`.
+-   `.env` -> Where all the credentials and other config are stored (ie: SMTP, Twilio API, Pushbullet, Telegram, etc). Create your own `.env` file from `.env.sample`.
 -   `servers.json` -> Where you can add the OVH / Kimsufi / SoYouStart servers you want to monitor.
 
 ## Run with NodeJS
@@ -43,6 +42,6 @@ You can easily use it out of the box and run it in a headless server like a chea
 
 MIT License
 
-Copyright (c) 2020 Jorge Barnaby
+Copyright (c) 2021 Jorge Barnaby
 
 See [LICENSE](LICENSE)
