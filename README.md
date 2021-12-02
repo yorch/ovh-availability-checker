@@ -1,7 +1,6 @@
 # OVH Availability Checker
 
 [![Build Status](https://travis-ci.org/yorch/ovh-availability-checker.svg?branch=master)](https://travis-ci.org/yorch/ovh-availability-checker)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=yorch/ovh-availability-checker)](https://dependabot.com)
 
 This is a NodeJS application that checks for the availability of OVH / Kimsufi / SoYouStart servers (according to `servers.json` config file) and if they are in stock, it can trigger:
 
