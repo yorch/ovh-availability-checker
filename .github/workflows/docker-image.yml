@@ -1,0 +1,24 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build . --tag yorch/ovh-availability-checker
+    - name: Run the Docker container
+      run: docker run -d --name checker yorch/ovh-availability-checker
+    - name: Check Docker container logs
+      run: docker logs checker
+    - name: List all containers
+      run: docker ps -a
