@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const { logger } = require('./utils/logger');
 const { AvailabilityChecker } = require('./availability-checker');
-const { sendEmail, sendPushbullet, sendSms } = require('./actions');
+const { sendEmail, sendPushbullet, sendSms, sendTelegram } = require('./actions');
 const { availabilityUrl, cronSchedule } = require('./config');
 const serversToCheck = require('../servers.json');
 
@@ -12,7 +12,7 @@ if (!availabilityUrl) {
 }
 
 const availabilityChecker = new AvailabilityChecker({
-    actions: [sendEmail, sendPushbullet, sendSms],
+    actions: [sendEmail, sendPushbullet, sendSms, sendTelegram],
     logger,
     serversToCheck,
     url: availabilityUrl

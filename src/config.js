@@ -38,5 +38,10 @@ module.exports = {
         apiToken: env.PUSHBULLET_API_TOKEN,
         deviceId: env.PUSHBULLET_DEVICE_ID,
         noteTitle: env.PUSHBULLET_NODE_TITLE
+    },
+    telegram: {
+        enable: env.TELEGRAM_ENABLE === 'true',
+        botToken: env.TELEGRAM_BOT_TOKEN,
+        chatId: env.TELEGRAM_CHAT_ID
     }
 };

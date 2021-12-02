@@ -30,6 +30,7 @@ class AvailabilityChecker {
         const start = new Date();
         this.logger.info(`Obtaining availability from ${this.url}`);
         const body = await got(this.url).json();
+
         this.logger.info(
             `Got response in ${(new Date() - start) / 1000} secs (length: ${
                 body.length

@@ -1,42 +1,22 @@
 {
-  "1801sk16": {
-    "enable": false,
-    "name": "KS-5",
-    "price": "$16.99",
-    "ram": "16GB DDR3 1333 MHz",
-    "cpu": "AMD Opteron 4122 2.2GHz (4c/4t)",
-    "disk": "2TB",
-    "network": "100Mpbs",
-    "datacenters": ["gra", "rbx", "sbg"]
-  },
-  "1804sk16": {
+  "2201sys02": {
     "enable": true,
-    "name": "KS-5",
-    "price": "$16.99",
-    "ram": "16GB DDR3 1333 MHz",
-    "cpu": "AMD Opteron 4122 2.2GHz (4c/4t)",
-    "disk": "2TB",
-    "network": "100Mpbs",
-    "datacenters": ["bhs"]
+    "name": "SYS-2-SAT-32",
+    "price": "€24.99",
+    "ram": "32GB DDR3 ECC 2133MHz",
+    "cpu": "Intel  Xeon D1540",
+    "disk": "SoftRAID  4x2TB   SATA",
+    "network": "250Mpbs",
+    "datacenters": ["gra", "rbx"]
   },
-  "1801sk20": {
-    "enable": false,
-    "name": "KS-9",
-    "price": "$20.99",
-    "ram": "16GB DDR3 ECC 1333 MHz",
-    "cpu": "Intel Xeon W3520 2.66GHz (4c/8t)",
-    "disk": "SoftRaid 2x240Go SSD",
-    "network": "100Mpbs",
-    "datacenters": ["gra", "rbx", "sbg"]
-  },
-  "1804sk20": {
+  "2209sys02": {
     "enable": true,
-    "name": "KS-9",
-    "price": "$20.99",
-    "ram": "16GB DDR3 ECC 1333 MHz",
-    "cpu": "Intel Xeon W3520 2.66GHz (4c/8t)",
-    "disk": "SoftRaid 2x240Go SSD",
-    "network": "100Mpbs",
-    "datacenters": ["bhs"]
+    "name": "SYS-2-SAT-32",
+    "price": "€24.99",
+    "ram": "32GB DDR3 ECC 2133MHz",
+    "cpu": "Intel  Xeon D1540",
+    "disk": "SoftRAID  4x2TB   SATA",
+    "network": "250Mpbs",
+    "datacenters": ["gra", "rbx"]
   }
 }
