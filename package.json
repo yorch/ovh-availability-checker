@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": "yorch/ovh-availability-checker",
   "dependencies": {
-    "common-tags": "1.8.0",
+    "common-tags": "1.8.2",
     "dotenv": "10.0.0",
     "got": "11.8.3",
     "lodash": "4.17.21",
