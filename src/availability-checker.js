@@ -27,12 +27,12 @@ class AvailabilityChecker {
     }
 
     async _obtainAvailability() {
-        const start = new Date();
+        const start = Date.now();
         this.logger.info(`Obtaining availability from ${this.url}`);
         const body = await got(this.url).json();
 
         this.logger.info(
-            `Got response in ${(new Date() - start) / 1000} secs (length: ${
+            `Got response in ${(Date.now() - start) / 1000} secs (length: ${
                 body.length
             } chars)`
         );
@@ -103,9 +103,8 @@ class AvailabilityChecker {
 
     async run() {
         const availability = await this._obtainAvailability();
-        const processedAvailability = this._processAvailabilityResponse(
-            availability
-        );
+        const processedAvailability =
+            this._processAvailabilityResponse(availability);
         const serversAvailable = processedAvailability.filter(
             ({ availableIn }) => availableIn.length > 0
         );
@@ -143,8 +142,7 @@ class AvailabilityChecker {
             this.logger.error('There is no scheduled task');
             return;
         }
-        // this.scheduledTask.stop();
-        this.scheduledTask.destroy();
+        this.scheduledTask.stop();
         this.scheduledTask = null;
     }
 }
