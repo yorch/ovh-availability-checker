@@ -887,10 +887,10 @@ node-forge@^0.7.6:
   resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.7.6.tgz#fdf3b418aee1f94f0ef642cd63486c77ca9724ac"
   integrity sha512-sol30LUpz1jQFBjOKwbjxijiE3b6pjd74YwfD0fJOKPjF+fONKb2Yg8rYgS6+bK6VDl+/wfr4IYpC7jDzLUIfw==
 
-node-telegram-bot-api@0.54.0:
-  version "0.54.0"
-  resolved "https://registry.yarnpkg.com/node-telegram-bot-api/-/node-telegram-bot-api-0.54.0.tgz#1a857ddeb2f523d81c8e10a1b70169c7cf069ff5"
-  integrity sha512-ckrpY/ABFLwA1DUzEc9iEQtsgQs8WcGC6m7iJ1bbnH+c7EOLnMdCfw+hUesyfuwOfAkkECYFxvoW4lJNy+Oztw==
+node-telegram-bot-api@0.55.0:
+  version "0.55.0"
+  resolved "https://registry.yarnpkg.com/node-telegram-bot-api/-/node-telegram-bot-api-0.55.0.tgz#1e357b3aac2e0bd7a0a68c958b55d888178aef57"
+  integrity sha512-yn89yuJZr/MMCRNNJ3q2FCvrczfWC+hS/cj9pcY0CfQTJ+I/2jlcbsgXeV6EvVYUTjvqTxTG1lq+J9InRRjUow==
   dependencies:
     array.prototype.findindex "^2.0.2"
     bl "^1.2.3"
