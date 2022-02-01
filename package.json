@@ -20,7 +20,7 @@
     "nodemailer": "6.7.2",
     "pushbullet": "2.4.0",
     "simple-sms-sender": "0.0.4",
-    "winston": "3.4.0"
+    "winston": "3.5.1"
   },
   "engineStrict": true,
   "engines": {
