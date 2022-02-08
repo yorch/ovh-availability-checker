@@ -12,7 +12,7 @@
   "repository": "yorch/ovh-availability-checker",
   "dependencies": {
     "common-tags": "1.8.2",
-    "dotenv": "14.2.0",
+    "dotenv": "16.0.0",
     "got": "11.8.2",
     "lodash": "4.17.21",
     "node-cron": "3.0.0",
