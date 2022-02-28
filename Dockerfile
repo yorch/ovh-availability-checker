@@ -42,4 +42,4 @@ CMD mkdir -p ${WORKDIR}/logs && \
     dockerize \
     -stdout ${LOG_FILE} \
     -stderr ${LOG_ERROR_FILE} \
-    node src/index.js
+    yarn start

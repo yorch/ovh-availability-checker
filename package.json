@@ -2,10 +2,10 @@
   "name": "ovh-availability-checker",
   "version": "2.1.0",
   "description": "OVH Servers Availability Checker",
-  "main": "src/index.js",
+  "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ."
+    "start": "ts-node ."
   },
   "author": "Jorge Barnaby <jorge {dot} barnaby {at} gmail {dot} com",
   "license": "MIT",
@@ -13,6 +13,7 @@
   "dependencies": {
     "common-tags": "1.8.2",
     "dotenv": "16.0.0",
+    "env-var": "7.1.1",
     "got": "11.8.3",
     "lodash": "4.17.21",
     "node-cron": "3.0.0",
@@ -20,11 +21,21 @@
     "nodemailer": "6.7.2",
     "pushbullet": "3.0.0",
     "simple-sms-sender": "0.0.4",
+    "ts-node": "10.5.0",
+    "typescript": "4.5.5",
     "winston": "3.6.0"
   },
   "engineStrict": true,
   "engines": {
-    "node": ">= 14.0.0"
+    "node": ">= 16.0.0"
   },
-  "packageManager": "yarn@3.2.0"
+  "packageManager": "yarn@3.2.0",
+  "devDependencies": {
+    "@types/common-tags": "1.8.1",
+    "@types/lodash": "4.14.179",
+    "@types/node": "17.0.21",
+    "@types/node-cron": "3.0.1",
+    "@types/node-telegram-bot-api": "0.56.0",
+    "@types/nodemailer": "6.4.4"
+  }
 }
