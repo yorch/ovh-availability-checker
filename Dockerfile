@@ -22,19 +22,21 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
     && tar -C /usr/local/bin -xzvf dockerize-alpine-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
     && rm dockerize-alpine-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
-WORKDIR /app
+ENV WORKDIR=/app
+WORKDIR $WORKDIR
 
-COPY package.json yarn.lock /app/
+COPY package.json yarn.lock .yarnrc.yml ./
+COPY .yarn ./.yarn
 RUN yarn install --immutable \
     && yarn cache clean
-COPY . /app
+COPY . .
 
 ENV NODE_ENV production
 
-ENV LOG_FILE=/app/logs/combined.log
-ENV LOG_ERROR_FILE=/app/logs/error.log
+ENV LOG_FILE=${WORKDIR}/logs/combined.log
+ENV LOG_ERROR_FILE=${WORKDIR}/logs/error.log
 
-CMD mkdir -p /app/logs && \
+CMD mkdir -p ${WORKDIR}/logs && \
     touch ${LOG_FILE} && \
     touch ${LOG_ERROR_FILE} && \
     dockerize \
