@@ -3,17 +3,16 @@ const {
     pushbullet: { apiToken, enable, deviceId, noteTitle }
 } = require('../config');
 
-const sendPushbullet = ({ content, logger }) => {
+const sendPushbullet = async ({ content, logger }) => {
     if (enable) {
-        const pusher = new PushBullet(apiToken);
-        pusher.note(deviceId, noteTitle, content, (error, response) => {
-            if (error) {
-                logger.error(`Could not send pushbullet`, err);
-                return;
-            }
+        try {
+            const pusher = new PushBullet(apiToken);
+            const response = await pusher.note(deviceId, noteTitle, content);
             logger.info(`Pushbullet sent!`);
             logger.debug(`Pushbullet: ${response}`);
-        });
+        } catch (err) {
+            logger.error(`Could not send pushbullet`, err);
+        }
     }
 };
 
