@@ -38,7 +38,7 @@ export class AvailabilityChecker {
         }
         return acc;
       },
-      {}
+      {},
     );
     this.url = url;
 
@@ -50,7 +50,7 @@ export class AvailabilityChecker {
     const processedAvailability =
       this._processAvailabilityResponse(availability);
     const serversAvailable = processedAvailability.filter(
-      ({ availableIn }) => availableIn.length > 0
+      ({ availableIn }) => availableIn.length > 0,
     );
     if (!serversAvailable || serversAvailable.length === 0) {
       this.logger.info('No available servers');
@@ -58,8 +58,16 @@ export class AvailabilityChecker {
       const messages = serversAvailable
         .map(({ availableIn, datacenters, name, cpu, ram, disk, price }) =>
           availableIn.map((dc) =>
-            this._buildMessage({ name, cpu, dc, ram, disk, price, datacenters })
-          )
+            this._buildMessage({
+              name,
+              cpu,
+              dc,
+              ram,
+              disk,
+              price,
+              datacenters,
+            }),
+          ),
         )
         .flat();
 
@@ -105,15 +113,15 @@ export class AvailabilityChecker {
 
     return groupBy(
       body.filter(({ hardware }) =>
-        Object.keys(this.serversToCheck).includes(hardware)
+        Object.keys(this.serversToCheck).includes(hardware),
       ),
-      'hardware'
+      'hardware',
     );
   }
 
   _processAvailability(availabilityPerCode: HardwareAvailability[]) {
     const availability = (availabilityPerCode || []).map(
-      pick(['datacenters', 'region'])
+      pick(['datacenters', 'region']),
     );
 
     const datacenters = availability
@@ -124,7 +132,7 @@ export class AvailabilityChecker {
       availability,
       availableIn: datacenters
         .filter(
-          ({ availability }) => !UNAVAILABLE_STATES.includes(availability)
+          ({ availability }) => !UNAVAILABLE_STATES.includes(availability),
         )
         .map(({ datacenter }) => datacenter),
       datacenters,
@@ -137,7 +145,7 @@ export class AvailabilityChecker {
         ...rest,
         ...this._processAvailability(response[hardwareCode]),
         code: hardwareCode,
-      })
+      }),
     );
   }
 

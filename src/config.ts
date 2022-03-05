@@ -47,13 +47,13 @@ export const sms = {
 
 export const pushbullet = {
   enable: env.get('PUSHBULLET_ENABLE').default('false').asBool(),
-  apiToken: env.get('PUSHBULLET_API_TOKEN').default('').asString(),
-  deviceId: env.get('PUSHBULLET_DEVICE_ID').default('').asString(),
-  noteTitle: env.get('PUSHBULLET_NODE_TITLE').default('').asString(),
+  apiToken: env.get('PUSHBULLET_API_TOKEN').asString(),
+  deviceId: env.get('PUSHBULLET_DEVICE_ID').asString(),
+  noteTitle: env.get('PUSHBULLET_NODE_TITLE').asString(),
 };
 
 export const telegram = {
   enable: env.get('TELEGRAM_ENABLE').default('false').asBool(),
-  botToken: env.get('TELEGRAM_BOT_TOKEN'),
-  chatId: env.get('TELEGRAM_CHAT_ID'),
+  botToken: env.get('TELEGRAM_BOT_TOKEN').asString(),
+  chatId: env.get('TELEGRAM_CHAT_ID').asString(),
 };

@@ -10,6 +10,11 @@ export const sendPushbullet: Action = async ({ content, logger }) => {
     return;
   }
 
+  if (!apiToken || !deviceId || !noteTitle) {
+    logger.warn(`Pushbullet not configured correctly, can't send messages`);
+    return;
+  }
+
   try {
     const pusher = new PushBullet(apiToken);
     const response = await pusher.note(deviceId, noteTitle, content);

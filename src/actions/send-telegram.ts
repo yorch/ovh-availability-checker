@@ -12,6 +12,11 @@ export const sendTelegram: Action = ({ content, logger }) => {
     return;
   }
 
+  if (!botToken || !chatId) {
+    logger.warn('Telegram not configured properly, no message can be send');
+    return;
+  }
+
   try {
     const bot = new TelegramBot(botToken);
     bot.sendMessage(chatId, content);
