@@ -1,19 +1,24 @@
-import { oneLine } from 'common-tags';
 import got from 'got';
 import { Dictionary, groupBy } from 'lodash';
 import { pick } from 'lodash/fp';
-import cron from 'node-cron';
-import { Logger } from './logger';
-import { Action, HardwareAvailability, ServersToCheck } from './types';
+import * as cron from 'node-cron';
+import type { Logger } from './logger';
+import type {
+  Action,
+  HardwareAvailability,
+  ServerAvailable,
+  ServersAvailable,
+  ServersToCheck,
+} from './types';
 
-const UNAVAILABLE_STATES = ['unavailable', 'unknown'];
+const unavailableStates = new Set(['unavailable', 'unknown']);
 
 export class AvailabilityChecker {
   actions: Action[];
   logger: Logger;
   serversToCheck: ServersToCheck;
   url: string;
-  scheduledTask?: cron.ScheduledTask;
+  scheduledTask: cron.ScheduledTask | undefined;
 
   constructor({
     actions,
@@ -28,17 +33,8 @@ export class AvailabilityChecker {
   }) {
     this.actions = actions;
     this.logger = logger;
-    this.serversToCheck = Object.entries(serversToCheck).reduce(
-      (acc, [key, { enable, ...rest }]) => {
-        if (enable === true) {
-          return {
-            ...acc,
-            [key]: rest,
-          };
-        }
-        return acc;
-      },
-      {},
+    this.serversToCheck = Object.fromEntries(
+      Object.entries(serversToCheck).filter(([, { enable }]) => enable)
     );
     this.url = url;
 
@@ -47,51 +43,32 @@ export class AvailabilityChecker {
 
   async run() {
     const availability = await this._obtainAvailability();
-    const processedAvailability =
-      this._processAvailabilityResponse(availability);
-    const serversAvailable = processedAvailability.filter(
-      ({ availableIn }) => availableIn.length > 0,
-    );
+    const serversAvailable = this._processAvailabilityResponse(
+      availability
+    ).filter(({ availableIn }) => availableIn.length > 0);
+
     if (!serversAvailable || serversAvailable.length === 0) {
       this.logger.info('No available servers');
     } else {
-      const messages = serversAvailable
-        .map(({ availableIn, datacenters, name, cpu, ram, disk, price }) =>
-          availableIn.map((dc) =>
-            this._buildMessage({
-              name,
-              cpu,
-              dc,
-              ram,
-              disk,
-              price,
-              datacenters,
-            }),
-          ),
-        )
-        .flat();
+      const messages = this._buildMessages(serversAvailable);
 
-      // this.logger.info(JSON.stringify(availability, null, 2));
-      // this.logger.info(JSON.stringify(processed, null, 2));
+      // This.logger.info(JSON.stringify(availability, null, 2));
       // this.logger.info(JSON.stringify(serversAvailable, null, 2));
 
-      // TODO: Maybe consolidate multiple messages into same action (ie: same email)
-      messages.forEach((message) => {
-        this.logger.info(messages);
-        this.actions.forEach(async (action) => {
-          await action({ content: message, logger: this.logger });
-        });
-      });
+      await this._runActions(messages);
     }
   }
 
   setupSchedule(schedule: string) {
     if (this.scheduledTask) {
-      this.logger.error('There is already an scheduled task');
+      this.logger.error(
+        'There is already an scheduled task, not scheduling a new one'
+      );
       return;
     }
-    this.scheduledTask = cron.schedule(schedule, () => {
-      this.run();
+
+    this.scheduledTask = cron.schedule(schedule, async () => {
+      await this.run();
     });
   }
 
@@ -100,68 +77,118 @@ export class AvailabilityChecker {
       this.logger.error('There is no scheduled task');
       return;
     }
+
     this.scheduledTask.stop();
     this.scheduledTask = undefined;
   }
 
-  async _obtainAvailability() {
-    this.logger.info(`Obtaining availability from ${this.url}`);
-    const start = Date.now();
-    const body = await got(this.url).json<HardwareAvailability[]>();
-    const timeTookSecs = (Date.now() - start) / 1000;
-    this.logger.info(`Obtained ${body.length} entries in ${timeTookSecs} secs`);
-
-    return groupBy(
-      body.filter(({ hardware }) =>
-        Object.keys(this.serversToCheck).includes(hardware),
-      ),
-      'hardware',
-    );
+  private async _runActions(messages: string[]) {
+    try {
+      // TODO: Consolidate multiple messages into same action (ie: same email)
+      // TODO: Limit concurrency (ie: p-limit)
+      await Promise.all(
+        messages.flatMap((message) => {
+          this.logger.info(`Processing message: ${message}`);
+          return this.actions.map(this._buildRunAction(message));
+        })
+      );
+    } catch (error) {
+      this.logger.error('There was an error executing actions', error);
+    }
   }
 
-  _processAvailability(availabilityPerCode: HardwareAvailability[]) {
-    const availability = (availabilityPerCode || []).map(
-      pick(['datacenters', 'region']),
-    );
-
-    const datacenters = availability
-      .map(({ datacenters }) => datacenters)
-      .flat();
-
-    return {
-      availability,
-      availableIn: datacenters
-        .filter(
-          ({ availability }) => !UNAVAILABLE_STATES.includes(availability),
-        )
-        .map(({ datacenter }) => datacenter),
-      datacenters,
+  private _buildRunAction(message: string) {
+    return async (action: Action) => {
+      try {
+        await action({ content: message, logger: this.logger });
+      } catch (error) {
+        // TODO: Add more info about current action
+        this.logger.error(
+          `There was an error executing action ${action.name}`,
+          error
+        );
+      }
     };
   }
 
-  _processAvailabilityResponse(response: Dictionary<HardwareAvailability[]>) {
+  private async _obtainAvailability() {
+    this.logger.info(`Obtaining availability from ${this.url}`);
+    const start = Date.now();
+    const response = await got(this.url).json<HardwareAvailability[]>();
+    const timeTookSecs = (Date.now() - start) / 1000;
+    this.logger.info(
+      `Obtained ${response.length} entries in ${timeTookSecs} secs`
+    );
+
+    return groupBy(
+      response.filter(({ hardware }) =>
+        Object.keys(this.serversToCheck).includes(hardware)
+      ),
+      'hardware'
+    );
+  }
+
+  private _processAvailabilityResponse(
+    response: Dictionary<HardwareAvailability[]>
+  ): ServersAvailable {
     return Object.entries(this.serversToCheck).map(
       ([hardwareCode, { datacenters, ...rest }]) => ({
         ...rest,
         ...this._processAvailability(response[hardwareCode]),
         code: hardwareCode,
-      }),
+      })
     );
   }
 
-  _buildMessage({
-    name,
-    dc,
-    cpu,
-    ram,
-    disk,
-    price,
-    datacenters,
-  }: Partial<ReturnType<typeof this._processAvailabilityResponse>[0]> & {
+  private _processAvailability(availabilityPerCode?: HardwareAvailability[]) {
+    const availability = (availabilityPerCode ?? []).map(
+      pick(['datacenters', 'region'])
+    );
+
+    const datacentersAvailability = availability.flatMap(
+      ({ datacenters }) => datacenters
+    );
+
+    return {
+      availability,
+      availableIn: datacentersAvailability
+        .filter(({ availability }) => !unavailableStates.has(availability))
+        .map(({ datacenter }) => datacenter),
+      datacentersAvailability,
+    };
+  }
+
+  private _buildMessages(serversAvailable: ServersAvailable) {
+    return serversAvailable.flatMap(
+      ({ availableIn, datacentersAvailability, name, cpu, ram, disk, price }) =>
+        availableIn.map((dc) =>
+          this._buildMessage({
+            name,
+            cpu,
+            dc,
+            ram,
+            disk,
+            price,
+            datacentersAvailability,
+          })
+        )
+    );
+  }
+
+  private _buildMessage({
+    name = '',
+    dc = '',
+    cpu = '',
+    ram = '',
+    disk = '',
+    price = '',
+    datacentersAvailability,
+  }: Partial<ServerAvailable> & {
     dc: string;
   }) {
     const { availability = '' } =
-      datacenters?.find(({ datacenter }) => datacenter === dc) || {};
+      datacentersAvailability?.find(({ datacenter }) => datacenter === dc) ??
+      {};
 
     return `${name} (DC: ${dc}): ${cpu}, ${ram}, ${disk} ==> ${price} (availability: ${availability})`;
   }

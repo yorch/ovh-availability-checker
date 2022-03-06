@@ -1,7 +1,7 @@
-// import * as env from 'env-var';
 import { from, logger } from 'env-var';
-// import { from } from 'env-var';
-// import { logger } from './logger';
+
+// eslint-disable-next-line unicorn/prefer-module, @typescript-eslint/no-var-requires, @typescript-eslint/no-require-imports, @typescript-eslint/no-unsafe-call
+require('dotenv').config();
 
 const env = from(process.env, {}, logger);
 
@@ -10,16 +10,20 @@ export const availabilityUrl = env
   .required()
   .asString();
 
+export const inputFile = env.get('INPUT_FILE').required().asString();
+
 export const cronSchedule = env.get('CRON_SCHEDULE').required().asString();
 
 export const logsDirectory = env.get('LOGS_DIR').default('./logs').asString();
+
+export const nodeEnv = env.get('NODE_ENV').default('development').asString();
 
 export const email = {
   enable: env.get('EMAIL_ENABLE').default('false').asBool(),
   smtp: {
     host: env.get('SMTP_HOST').asString(),
-    port: env.get('SMTP_PORT').asInt(),
-    // true for 465, false for other ports
+    port: env.get('SMTP_PORT').asPortNumber(),
+    // `true` for 465, `false` for other ports
     secure: env.get('SMTP_IS_SECURE').asBool(),
     user: env.get('SMTP_USER').asString(),
     pass: env.get('SMTP_PASS').asString(),

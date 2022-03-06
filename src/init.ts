@@ -1,16 +1,16 @@
-require('dotenv').config();
-
-import { logger } from './logger';
-import { AvailabilityChecker } from './availability-checker';
 import { sendEmail, sendPushbullet, sendSms, sendTelegram } from './actions';
+import { AvailabilityChecker } from './availability-checker';
 import { availabilityUrl, cronSchedule } from './config';
-import serversToCheck from '../servers.json';
+import { logger } from './logger';
+import { readInputFile } from './read-input-file';
 
-export const init = () => {
+export const init = async () => {
   if (!availabilityUrl) {
-    logger.info('No availabilityUrl configured, exiting');
+    logger.warn('No availabilityUrl configured, exiting');
     return;
   }
+
+  const serversToCheck = await readInputFile();
 
   const availabilityChecker = new AvailabilityChecker({
     actions: [sendEmail, sendPushbullet, sendSms, sendTelegram],
@@ -23,6 +23,6 @@ export const init = () => {
     availabilityChecker.setupSchedule(cronSchedule);
   } else {
     // Run once
-    availabilityChecker.run();
+    await availabilityChecker.run();
   }
 };

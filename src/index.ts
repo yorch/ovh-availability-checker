@@ -1,3 +1,4 @@
+// eslint-disable node/prefer-global/process
 import { init } from './init';
 import { logger } from './logger';
 
@@ -6,4 +7,6 @@ process.on('SIGTERM', () => {
   process.exit(1);
 });
 
-init();
+init().catch((error) => {
+  logger.error('There was an unexpected error executing the program', error);
+});

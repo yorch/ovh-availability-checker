@@ -1,6 +1,6 @@
 import { SmsSender } from 'simple-sms-sender';
 import { sms } from '../config';
-import { Action } from '../types';
+import type { Action } from '../types';
 
 const {
   enable,

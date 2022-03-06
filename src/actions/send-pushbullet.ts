@@ -1,7 +1,5 @@
-// @ts-expect-error
-import PushBullet from 'pushbullet';
 import { pushbullet } from '../config';
-import { Action } from '../types';
+import type { Action } from '../types';
 
 const { apiToken, enable, deviceId, noteTitle } = pushbullet;
 
@@ -9,6 +7,10 @@ export const sendPushbullet: Action = async ({ content, logger }) => {
   if (!enable) {
     return;
   }
+
+  // @ts-expect-error - Typing missing
+  // eslint-disable-next-line @typescript-eslint/naming-convention, node/no-unsupported-features/es-syntax
+  const PushBullet = await import('pushbullet');
 
   if (!apiToken || !deviceId || !noteTitle) {
     logger.warn(`Pushbullet not configured correctly, can't send messages`);
@@ -19,8 +21,8 @@ export const sendPushbullet: Action = async ({ content, logger }) => {
     const pusher = new PushBullet(apiToken);
     const response = await pusher.note(deviceId, noteTitle, content);
     logger.info(`Pushbullet sent!`);
-    logger.debug(`Pushbullet: ${response}`);
-  } catch (err) {
-    logger.error(`Could not send pushbullet`, err);
+    logger.debug(`Pushbullet: ${String(response || '')}`);
+  } catch (error) {
+    logger.error(`Could not send pushbullet`, error);
   }
 };

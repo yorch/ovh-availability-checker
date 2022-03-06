@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 import { email } from '../config';
-import { Action } from '../types';
+import type { Action } from '../types';
 
 const {
   enable,
@@ -12,6 +12,11 @@ const {
 
 export const sendEmail: Action = async ({ content, logger }) => {
   if (!enable) {
+    return;
+  }
+
+  if (!host || !port || !user || !pass || !from.email || !from.name) {
+    logger.warn(`Email not fully configured, can't send emails.`);
     return;
   }
 
@@ -34,13 +39,13 @@ export const sendEmail: Action = async ({ content, logger }) => {
     });
     const { messageId } = info;
 
-    logger.info(`Message sent: ${messageId}`);
+    logger.info(`Email message sent: ${messageId}`);
     // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
 
     // Preview only available when sending through an Ethereal account
     // logger.info(`Preview URL: ${nodemailer.getTestMessageUrl(info)}`);
     // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-  } catch (err) {
-    logger.error(`Could not send the email`, err);
+  } catch (error) {
+    logger.error(`Could not send the email`, error);
   }
 };

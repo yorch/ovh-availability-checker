@@ -1,13 +1,15 @@
 // https://github.com/yagop/node-telegram-bot-api/blob/master/src/telegram.js#L64-L84
-process.env.NTBA_FIX_319 = 'false';
-
 import TelegramBot from 'node-telegram-bot-api';
 import { telegram } from '../config';
-import { Action } from '../types';
+import type { Action } from '../types';
+
+// eslint-ignore-next-line node/prefer-global/process
+// @ts-expect-error - Avoid error suggesting to use ['NTBA_FIX_319'] which conflicts with autoformat
+process.env.NTBA_FIX_319 = 'false';
 
 const { botToken, enable, chatId } = telegram;
 
-export const sendTelegram: Action = ({ content, logger }) => {
+export const sendTelegram: Action = async ({ content, logger }) => {
   if (!enable) {
     return;
   }
@@ -19,8 +21,12 @@ export const sendTelegram: Action = ({ content, logger }) => {
 
   try {
     const bot = new TelegramBot(botToken);
-    bot.sendMessage(chatId, content);
-  } catch (err) {
-    logger.error('Could not send Telegram', err);
+
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    const { message_id } = await bot.sendMessage(chatId, content);
+
+    logger.info(`Telegram message sent: ${message_id}`);
+  } catch (error) {
+    logger.error('Could not send Telegram message', error);
   }
 };

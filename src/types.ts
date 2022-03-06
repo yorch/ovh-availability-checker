@@ -1,4 +1,4 @@
-import { Logger } from './logger';
+import type { Logger } from './logger';
 
 export type Action = ({
   content,
@@ -48,8 +48,20 @@ export type ServerToCheck = {
   cpu: string;
   disk: string;
   network: string;
-  // datacenters: Datacenter[];
+  // Datacenters: Datacenter[];
   datacenters: string[];
 };
 
 export type ServersToCheck = Record<string, ServerToCheck>;
+
+export type ServerAvailable = Pick<
+  ServerToCheck,
+  'name' | 'cpu' | 'ram' | 'disk' | 'price'
+> & {
+  availability: Array<Pick<HardwareAvailability, 'datacenters' | 'region'>>;
+  availableIn: Datacenter[];
+  code: string;
+  datacentersAvailability: DatacenterAvailability[];
+};
+
+export type ServersAvailable = ServerAvailable[];
