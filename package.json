@@ -2,10 +2,12 @@
   "name": "ovh-availability-checker",
   "version": "2.1.0",
   "description": "OVH Servers Availability Checker",
-  "main": "src/index.js",
+  "main": "src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ."
+    "start": "ts-node --esm .",
+    "test": "xo",
+    "lint": "xo",
+    "prettier": "prettier ."
   },
   "author": "Jorge Barnaby <jorge {dot} barnaby {at} gmail {dot} com",
   "license": "MIT",
@@ -13,18 +15,43 @@
   "dependencies": {
     "common-tags": "1.8.2",
     "dotenv": "16.0.0",
+    "env-var": "7.1.1",
     "got": "11.8.3",
+    "load-json-file": "6.2.0",
     "lodash": "4.17.21",
     "node-cron": "3.0.0",
     "node-telegram-bot-api": "0.56.0",
     "nodemailer": "6.7.2",
     "pushbullet": "3.0.0",
     "simple-sms-sender": "0.0.4",
+    "ts-node": "10.7.0",
+    "typescript": "4.6.2",
     "winston": "3.6.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node16-strictest": "1.0.0",
+    "@types/common-tags": "1.8.1",
+    "@types/lodash": "4.14.179",
+    "@types/node": "17.0.21",
+    "@types/node-cron": "3.0.1",
+    "@types/node-telegram-bot-api": "0.56.0",
+    "@types/nodemailer": "6.4.4",
+    "@types/prettier": "2.4.4",
+    "@types/xo": "0.39.2",
+    "prettier": "2.5.1",
+    "xo": "0.48.0"
   },
   "engineStrict": true,
   "engines": {
-    "node": ">= 14.0.0"
+    "node": ">= 16.0.0"
   },
-  "packageManager": "yarn@3.2.0"
+  "packageManager": "yarn@3.2.0",
+  "xo": {
+    "prettier": true,
+    "rules": {
+      "import/extensions": 0,
+      "node/prefer-global/process": 0,
+      "@typescript-eslint/no-implicit-any-catch": 0
+    }
+  }
 }
