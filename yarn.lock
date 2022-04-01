@@ -439,11 +439,11 @@ aws4@^1.8.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.11.0.tgz#d61f46d83b2519250e2784daf5b09479a8b41c59"
 
-axios@^0.21.1:
-  version "0.21.4"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
+axios@^0.26.1:
+  version "0.26.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.26.1.tgz#1ede41c51fcf51bbbd6fd43669caaa4f0495aaa9"
   dependencies:
-    follow-redirects "^1.14.0"
+    follow-redirects "^1.14.8"
 
 balanced-match@^1.0.0:
   version "1.0.2"
@@ -1276,7 +1276,7 @@ fn.name@1.x.x:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/fn.name/-/fn.name-1.1.0.tgz#26cad8017967aea8731bc42961d04a3d5988accc"
 
-follow-redirects@^1.14.0:
+follow-redirects@^1.14.8:
   version "1.14.9"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.9.tgz#dd4ea157de7bfaf9ea9b3fbd85aa16951f78d8d7"
 
@@ -2714,11 +2714,11 @@ signal-exit@^3.0.3:
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.7.tgz#a9a1767f8af84155114eaabd73f99273c8f59ad9"
 
-simple-sms-sender@0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/simple-sms-sender/-/simple-sms-sender-0.0.4.tgz#ffc44dcb3d58d04c5c776738358471592bccd8c1"
+simple-sms-sender@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/simple-sms-sender/-/simple-sms-sender-0.1.1.tgz#f981b0518ddad50d032cb5aded45553d5ce16374"
   dependencies:
-    twilio "3.62.0"
+    twilio "3.76.0"
 
 simple-swizzle@^0.2.2:
   version "0.2.2"
@@ -2956,20 +2956,20 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
 
-twilio@3.62.0:
-  version "3.62.0"
-  resolved "https://registry.yarnpkg.com/twilio/-/twilio-3.62.0.tgz#5c51e260c07b6df2838bac35df36c08fca602f90"
+twilio@3.76.0:
+  version "3.76.0"
+  resolved "https://registry.yarnpkg.com/twilio/-/twilio-3.76.0.tgz#5f047977cc5cc8db1dbc2da6bf955b314da6e2e2"
   dependencies:
-    axios "^0.21.1"
+    axios "^0.26.1"
     dayjs "^1.8.29"
     https-proxy-agent "^5.0.0"
     jsonwebtoken "^8.5.1"
-    lodash "^4.17.19"
+    lodash "^4.17.21"
     q "2.0.x"
     qs "^6.9.4"
     rootpath "^0.1.2"
     scmp "^2.1.0"
-    url-parse "^1.5.0"
+    url-parse "^1.5.9"
     xmlbuilder "^13.0.2"
 
 type-check@^0.4.0, type-check@~0.4.0:
@@ -3025,7 +3025,7 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
-url-parse@^1.5.0:
+url-parse@^1.5.9:
   version "1.5.10"
   resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.10.tgz#9d3c2f736c1d75dd3bd2be507dcc111f1e2ea9c1"
   dependencies:
