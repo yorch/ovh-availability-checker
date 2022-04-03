@@ -262,10 +262,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash@npm:4.14.179":
-  version: 4.14.179
-  resolution: "@types/lodash@npm:4.14.179"
-  checksum: 71faa0c8071732c2b7f0bd092850d3cea96fc7912055d57d819cf2ab399a64150e4190d8a4ea35a0905662ddc118be9d2abd55891d8047c085acf98608156149
+"@types/lodash@npm:4.14.181":
+  version: 4.14.181
+  resolution: "@types/lodash@npm:4.14.181"
+  checksum: 0d1863d8383fd2f8bb42e9e3fc1d6255bb88ff034d6df848941063698944313dae944fc1270315613e3d303fae7c7a9a86085ad3235ed6204c56c4b0b3699aa9
   languageName: node
   linkType: hard
 
@@ -293,17 +293,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
+"@types/node@npm:*, @types/node@npm:17.0.23":
   version: 17.0.23
   resolution: "@types/node@npm:17.0.23"
   checksum: a3517554737cbb042e76c30d0e5482192ac4d9bea0eeb086e2622d9cabf460a0eb52a696b99fcd18e7fcc93c96db6cc7ae507f6608f256ef0b5c1d8c87a5a470
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:17.0.21":
-  version: 17.0.21
-  resolution: "@types/node@npm:17.0.21"
-  checksum: 89dcd2fe82f21d3634266f8384e9c865cf8af49685639fbdbd799bdd1040480fb1e8eeda2d3b9fce41edbe704d2a4be9f427118c4ae872e8d9bb7cbeb3c41a94
   languageName: node
   linkType: hard
 
@@ -698,12 +691,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^0.21.1":
-  version: 0.21.4
-  resolution: "axios@npm:0.21.4"
+"axios@npm:^0.26.1":
+  version: 0.26.1
+  resolution: "axios@npm:0.26.1"
   dependencies:
-    follow-redirects: ^1.14.0
-  checksum: 44245f24ac971e7458f3120c92f9d66d1fc695e8b97019139de5b0cc65d9b8104647db01e5f46917728edfc0cfd88eb30fc4c55e6053eef4ace76768ce95ff3c
+    follow-redirects: ^1.14.8
+  checksum: d9eb58ff4bc0b36a04783fc9ff760e9245c829a5a1052ee7ca6013410d427036b1d10d04e7380c02f3508c5eaf3485b1ae67bd2adbfec3683704745c8d7a6e1a
   languageName: node
   linkType: hard
 
@@ -1969,7 +1962,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.14.0":
+"follow-redirects@npm:^1.14.8":
   version: 1.14.9
   resolution: "follow-redirects@npm:1.14.9"
   peerDependenciesMeta:
@@ -3348,10 +3341,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nodemailer@npm:6.7.2":
-  version: 6.7.2
-  resolution: "nodemailer@npm:6.7.2"
-  checksum: 3c37a40928448e2f5118a9f2f016c7a4f32228d0e6b7cc7d1834b8001374cc77280dc077a83239420f6daea4c898d9a1f336dfc2273bb7eddaf51a36bd126f72
+"nodemailer@npm:6.7.3":
+  version: 6.7.3
+  resolution: "nodemailer@npm:6.7.3"
+  checksum: b94d099f00f25666fc96a7cb498045e7428045b8cc0245ce10522190fd513b586d6e31305afd019f6878f1540d14d169d0dbe2e1f77385795c7054912d822ec0
   languageName: node
   linkType: hard
 
@@ -3516,8 +3509,8 @@ __metadata:
   dependencies:
     "@tsconfig/node16-strictest": 1.0.0
     "@types/common-tags": 1.8.1
-    "@types/lodash": 4.14.179
-    "@types/node": 17.0.21
+    "@types/lodash": 4.14.181
+    "@types/node": 17.0.23
     "@types/node-cron": 3.0.1
     "@types/node-telegram-bot-api": 0.56.0
     "@types/nodemailer": 6.4.4
@@ -3531,10 +3524,10 @@ __metadata:
     lodash: 4.17.21
     node-cron: 3.0.0
     node-telegram-bot-api: 0.56.0
-    nodemailer: 6.7.2
-    prettier: 2.5.1
+    nodemailer: 6.7.3
+    prettier: 2.6.2
     pushbullet: 3.0.0
-    simple-sms-sender: 0.0.4
+    simple-sms-sender: 0.1.1
     ts-node: 10.7.0
     typescript: 4.6.3
     winston: 3.6.0
@@ -3776,12 +3769,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.5.1":
-  version: 2.5.1
-  resolution: "prettier@npm:2.5.1"
+"prettier@npm:2.6.2":
+  version: 2.6.2
+  resolution: "prettier@npm:2.6.2"
   bin:
     prettier: bin-prettier.js
-  checksum: 21b9408476ea1c544b0e45d51ceb94a84789ff92095abb710942d780c862d0daebdb29972d47f6b4d0f7ebbfb0ffbf56cc2cfa3e3e9d1cca54864af185b15b66
+  checksum: 48d08dde8e9fb1f5bccdd205baa7f192e9fc8bc98f86e1b97d919de804e28c806b0e6cc685e4a88211aa7987fa9668f30baae19580d87ced3ed0f2ec6572106f
   languageName: node
   linkType: hard
 
@@ -4258,12 +4251,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"simple-sms-sender@npm:0.0.4":
-  version: 0.0.4
-  resolution: "simple-sms-sender@npm:0.0.4"
+"simple-sms-sender@npm:0.1.1":
+  version: 0.1.1
+  resolution: "simple-sms-sender@npm:0.1.1"
   dependencies:
-    twilio: 3.62.0
-  checksum: 0f06f4fa0c04e1c89a8e492ececfe916ba955559ff174c0daf3cfbe16977c6047c7b0b70be1e1c47ee36d86e8b82b7630369ee58cead0bf714e2a36c340c3fbd
+    twilio: 3.76.0
+  checksum: 64a986601aaa45f99a7fdc1fda1f4bc5f3d54879507a285a25adc4d41c35f99d0e051b28623b6a28359b46462c88bc700f76f07eb6083194f4260c430c159702
   languageName: node
   linkType: hard
 
@@ -4646,22 +4639,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"twilio@npm:3.62.0":
-  version: 3.62.0
-  resolution: "twilio@npm:3.62.0"
+"twilio@npm:3.76.0":
+  version: 3.76.0
+  resolution: "twilio@npm:3.76.0"
   dependencies:
-    axios: ^0.21.1
+    axios: ^0.26.1
     dayjs: ^1.8.29
     https-proxy-agent: ^5.0.0
     jsonwebtoken: ^8.5.1
-    lodash: ^4.17.19
+    lodash: ^4.17.21
     q: 2.0.x
     qs: ^6.9.4
     rootpath: ^0.1.2
     scmp: ^2.1.0
-    url-parse: ^1.5.0
+    url-parse: ^1.5.9
     xmlbuilder: ^13.0.2
-  checksum: daedb2adf30663940f717d9178eef01279350cacc386292350d4ef4ced983019578d406dc03023367ece3c1974c817d1e8f4735f6392b6b30bc54d77018fc4ad
+  checksum: 930e2a6f55f045ab03fbdbcda270e33f3d7d3e77a48438a6ed80596e1ba261b9b89f4056a4738485c52835139d952fa8b0897aacec83aeaa97118243c080d283
   languageName: node
   linkType: hard
 
@@ -4764,7 +4757,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"url-parse@npm:^1.5.0":
+"url-parse@npm:^1.5.9":
   version: 1.5.10
   resolution: "url-parse@npm:1.5.10"
   dependencies:
