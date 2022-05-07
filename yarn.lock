@@ -165,10 +165,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsconfig/node16-strictest@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@tsconfig/node16-strictest@npm:1.0.0"
-  checksum: 58cb51370cdffa2f97a56ae8765d74e1166108b7994630624cb09150e371097a1d006f96ee45077dcd5c830fb6969a6e78c09fb0e2c6f8a7d02703db5519a286
+"@tsconfig/node16-strictest@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@tsconfig/node16-strictest@npm:1.0.1"
+  checksum: 0a3a4f180e7cacda8065a5d73a33601b284369e0066409d0a38394d7eac1df5ae70a9e4110c8877da78a9d144c6f6fe0dcd6dd9b9a8a6c9a30200f4e702a11b7
   languageName: node
   linkType: hard
 
@@ -269,10 +269,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash@npm:4.14.181":
-  version: 4.14.181
-  resolution: "@types/lodash@npm:4.14.181"
-  checksum: 0d1863d8383fd2f8bb42e9e3fc1d6255bb88ff034d6df848941063698944313dae944fc1270315613e3d303fae7c7a9a86085ad3235ed6204c56c4b0b3699aa9
+"@types/lodash@npm:4.14.182":
+  version: 4.14.182
+  resolution: "@types/lodash@npm:4.14.182"
+  checksum: 7dd137aa9dbabd632408bd37009d984655164fa1ecc3f2b6eb94afe35bf0a5852cbab6183148d883e9c73a958b7fec9a9bcf7c8e45d41195add6a18c34958209
   languageName: node
   linkType: hard
 
@@ -290,20 +290,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node-telegram-bot-api@npm:0.56.0":
-  version: 0.56.0
-  resolution: "@types/node-telegram-bot-api@npm:0.56.0"
+"@types/node-telegram-bot-api@npm:0.56.2":
+  version: 0.56.2
+  resolution: "@types/node-telegram-bot-api@npm:0.56.2"
   dependencies:
     "@types/node": "*"
     "@types/request": "*"
-  checksum: c21c677972c0adb8bdd1e162182dd5d2181f7c309ac0a8623a3cc7ed73ff1eb1abe3eaf56d4370fa569d54954a613410b7e5563406da4a79f8f0982ad5c828da
+  checksum: 20e6ea4256f353bf58da622c7c175f0b16affb1b2d6da7eb66b3d8b71b3bdcf756dfc643110aaf06280a25095946586a6ccdb9a8c96e47e40a33a3a61cf52a58
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:17.0.23":
+"@types/node@npm:*":
   version: 17.0.23
   resolution: "@types/node@npm:17.0.23"
   checksum: a3517554737cbb042e76c30d0e5482192ac4d9bea0eeb086e2622d9cabf460a0eb52a696b99fcd18e7fcc93c96db6cc7ae507f6608f256ef0b5c1d8c87a5a470
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:17.0.31":
+  version: 17.0.31
+  resolution: "@types/node@npm:17.0.31"
+  checksum: 704618350f8420d5c47db0f7778398e821b7724369946f5c441a7e6b9343295553936400eb8309f0b07d5e39c240988ab3456b983712ca86265dabc9aee4ad3d
   languageName: node
   linkType: hard
 
@@ -330,10 +337,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prettier@npm:2.4.4":
-  version: 2.4.4
-  resolution: "@types/prettier@npm:2.4.4"
-  checksum: 2c2cc57efd49c7d8907415a72f96c84a6dd8696dd3bf8aa4ca3a667427bebf71cbfbc912673624bdfc935d272d1c008c639cf155f6449315990a4dc110f0d216
+"@types/prettier@npm:2.6.0":
+  version: 2.6.0
+  resolution: "@types/prettier@npm:2.6.0"
+  checksum: 946f1f82ce6f31664e023a5d65931c31b7d677b454f528f67dce851d72e7fcfe713076f4251b16c3646eecf1545f5f5b909b4962966341ed9ddf5b80113b3674
   languageName: node
   linkType: hard
 
@@ -3361,10 +3368,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nodemailer@npm:6.7.3":
-  version: 6.7.3
-  resolution: "nodemailer@npm:6.7.3"
-  checksum: b94d099f00f25666fc96a7cb498045e7428045b8cc0245ce10522190fd513b586d6e31305afd019f6878f1540d14d169d0dbe2e1f77385795c7054912d822ec0
+"nodemailer@npm:6.7.5":
+  version: 6.7.5
+  resolution: "nodemailer@npm:6.7.5"
+  checksum: d361a107b9eb264856852e32d3deb9bda1f69fdef6087ba20aaf58f98aacf4cd16c3633583ddbc1f23df25ad87c86bcca98511aaadfb447fe35a1e0eca6a7796
   languageName: node
   linkType: hard
 
@@ -3527,14 +3534,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ovh-availability-checker@workspace:."
   dependencies:
-    "@tsconfig/node16-strictest": 1.0.0
+    "@tsconfig/node16-strictest": 1.0.1
     "@types/common-tags": 1.8.1
-    "@types/lodash": 4.14.181
-    "@types/node": 17.0.23
+    "@types/lodash": 4.14.182
+    "@types/node": 17.0.31
     "@types/node-cron": 3.0.1
-    "@types/node-telegram-bot-api": 0.56.0
+    "@types/node-telegram-bot-api": 0.56.2
     "@types/nodemailer": 6.4.4
-    "@types/prettier": 2.4.4
+    "@types/prettier": 2.6.0
     "@types/xo": 0.39.2
     common-tags: 1.8.2
     dotenv: 16.0.0
@@ -3544,13 +3551,13 @@ __metadata:
     lodash: 4.17.21
     node-cron: 3.0.0
     node-telegram-bot-api: 0.56.0
-    nodemailer: 6.7.3
+    nodemailer: 6.7.5
     prettier: 2.6.2
     pushbullet: 3.0.0
     simple-sms-sender: 0.1.1
     ts-node: 10.7.0
-    typescript: 4.6.3
-    winston: 3.6.0
+    typescript: 4.6.4
+    winston: 3.7.2
     xo: 0.48.0
   languageName: unknown
   linkType: soft
@@ -4720,7 +4727,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:4.6.3, typescript@npm:^4.5.5":
+"typescript@npm:4.6.4":
+  version: 4.6.4
+  resolution: "typescript@npm:4.6.4"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: e7bfcc39cd4571a63a54e5ea21f16b8445268b9900bf55aee0e02ad981be576acc140eba24f1af5e3c1457767c96cea6d12861768fb386cf3ffb34013718631a
+  languageName: node
+  linkType: hard
+
+"typescript@npm:^4.5.5":
   version: 4.6.3
   resolution: "typescript@npm:4.6.3"
   bin:
@@ -4730,7 +4747,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.6.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.5.5#~builtin<compat/typescript>":
+"typescript@patch:typescript@4.6.4#~builtin<compat/typescript>":
+  version: 4.6.4
+  resolution: "typescript@patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 1cb434fbc637d347be90e3a0c6cd05e33c38f941713c8786d3031faf1842c2c148ba91d2fac01e7276b0ae3249b8633f1660e32686cc7a8c6a8fd5361dc52c66
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@^4.5.5#~builtin<compat/typescript>":
   version: 4.6.3
   resolution: "typescript@patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=bda367"
   bin:
@@ -4878,9 +4905,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"winston@npm:3.6.0":
-  version: 3.6.0
-  resolution: "winston@npm:3.6.0"
+"winston@npm:3.7.2":
+  version: 3.7.2
+  resolution: "winston@npm:3.7.2"
   dependencies:
     "@dabh/diagnostics": ^2.0.2
     async: ^3.2.3
@@ -4892,7 +4919,7 @@ __metadata:
     stack-trace: 0.0.x
     triple-beam: ^1.3.0
     winston-transport: ^4.5.0
-  checksum: 5641837781046a2f73111dfb2af500e88f4350521d01de184d33ac8ee60c28047a8897bd2ab7b438b3812fc31a88bbbee13fd9ed617d60bd16a56d0143e423dc
+  checksum: f1f1a860d2fa228b50880b20aaa6cc121085907791fe0d814ff9c062640f6b65da321726322094e7667eb63088b3bb67e7b4e219d998f29efcc6f583185a1cd3
   languageName: node
   linkType: hard
 
