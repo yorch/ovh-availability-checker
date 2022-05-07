@@ -15,7 +15,7 @@ export const availabilityUrl = env
 
 export const inputFile = env.get('INPUT_FILE').required().asString();
 
-export const cronSchedule = env.get('CRON_SCHEDULE').required().asString();
+export const cronSchedule = env.get('CRON_SCHEDULE').asString();
 
 export const logFilesEnable = env
   .get('LOG_FILES_ENABLE')
