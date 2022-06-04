@@ -24,7 +24,7 @@
     "nodemailer": "6.7.5",
     "pushbullet": "3.0.0",
     "simple-sms-sender": "0.1.1",
-    "ts-node": "10.7.0",
+    "ts-node": "10.8.1",
     "typescript": "4.6.4",
     "winston": "3.7.2"
   },
