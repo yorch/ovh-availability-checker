@@ -39,7 +39,7 @@
     "@types/prettier": "2.6.0",
     "@types/xo": "0.39.2",
     "prettier": "2.6.2",
-    "xo": "0.48.0"
+    "xo": "0.50.0"
   },
   "engineStrict": true,
   "engines": {
