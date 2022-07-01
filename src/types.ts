@@ -8,8 +8,6 @@ export type Action = ({
   logger: Logger;
 }) => Promise<void> | void;
 
-export type Availability = 'unavailable' | 'unknown';
-
 export type Region = 'apac' | 'europe' | 'northAmerica';
 
 export enum Datacenter {
@@ -30,7 +28,7 @@ export enum Datacenter {
 }
 
 export type DatacenterAvailability = {
-  availability: Availability | string;
+  availability: string;
   datacenter: Datacenter;
 };
 
