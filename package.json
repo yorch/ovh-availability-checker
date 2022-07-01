@@ -39,7 +39,7 @@
     "@types/prettier": "2.6.3",
     "@types/xo": "0.39.3",
     "prettier": "2.7.1",
-    "xo": "0.48.0"
+    "xo": "0.50.0"
   },
   "engineStrict": true,
   "engines": {
@@ -50,7 +50,7 @@
     "prettier": true,
     "rules": {
       "import/extensions": 0,
-      "node/prefer-global/process": 0,
+      "n/prefer-global/process": 0,
       "@typescript-eslint/no-implicit-any-catch": 0
     }
   }
