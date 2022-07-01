@@ -17,7 +17,7 @@
     "dotenv": "16.0.1",
     "env-var": "7.1.1",
     "got": "11.8.5",
-    "load-json-file": "6.2.0",
+    "load-json-file": "7.0.1",
     "lodash": "4.17.21",
     "node-cron": "3.0.1",
     "node-telegram-bot-api": "0.58.0",
