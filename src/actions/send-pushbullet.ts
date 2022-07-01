@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call */
 import { pushbullet } from '../config';
 import type { Action } from '../types';
 
@@ -9,7 +10,7 @@ export const sendPushbullet: Action = async ({ content, logger }) => {
   }
 
   // @ts-expect-error - Typing missing
-  // eslint-disable-next-line @typescript-eslint/naming-convention, node/no-unsupported-features/es-syntax
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   const PushBullet = await import('pushbullet');
 
   if (!apiToken || !deviceId || !noteTitle) {
