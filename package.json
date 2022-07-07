@@ -21,7 +21,7 @@
     "lodash": "4.17.21",
     "node-cron": "3.0.1",
     "node-telegram-bot-api": "0.58.0",
-    "nodemailer": "6.7.6",
+    "nodemailer": "6.7.7",
     "pushbullet": "3.0.0",
     "simple-sms-sender": "0.1.1",
     "ts-node": "10.8.1",
