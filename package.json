@@ -14,7 +14,7 @@
   "repository": "yorch/ovh-availability-checker",
   "dependencies": {
     "common-tags": "1.8.2",
-    "dotenv": "16.0.1",
+    "dotenv": "16.0.2",
     "env-var": "7.1.1",
     "got": "11.8.5",
     "load-json-file": "6.2.0",
