@@ -331,12 +331,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/nodemailer@npm:6.4.4":
-  version: 6.4.4
-  resolution: "@types/nodemailer@npm:6.4.4"
+"@types/nodemailer@npm:6.4.6":
+  version: 6.4.6
+  resolution: "@types/nodemailer@npm:6.4.6"
   dependencies:
     "@types/node": "*"
-  checksum: 16ed1bad2cd8471fd3b026471e234da33ba3b65935dc44b31be3145eff7bdb067eb4d08ec4b41d23339b988075299abc1a0c0fe77b99f04ca235827bca95af81
+  checksum: c5ba1b83a28eb13778c54333ebe5fdd40555ce6df9dea672acb5682f872e83cae2e538ceeb64c7b064a2c7e7dc836d5a250ec7174795c5a61cb3a3fb90f3dceb
   languageName: node
   linkType: hard
 
@@ -3443,10 +3443,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nodemailer@npm:6.7.6":
-  version: 6.7.6
-  resolution: "nodemailer@npm:6.7.6"
-  checksum: 60f59e6525656b95506092c0928c40e3b2997588b220c897515f1614c23c76318a4a71c96e1a83900f43153fab8baabfe7e9558608fafd3f74c9c5c634732731
+"nodemailer@npm:6.8.0":
+  version: 6.8.0
+  resolution: "nodemailer@npm:6.8.0"
+  checksum: e1827df714d207a00f1bf8012e767826862467b72440fc9c37cf238a14d01a4c591b7657f4d1805bfb2764883c07aa9f2e31ee96a5fec51ccf1e6ad6dd01bd1d
   languageName: node
   linkType: hard
 
@@ -3615,7 +3615,7 @@ __metadata:
     "@types/node": 17.0.45
     "@types/node-cron": 3.0.2
     "@types/node-telegram-bot-api": 0.57.1
-    "@types/nodemailer": 6.4.4
+    "@types/nodemailer": 6.4.6
     "@types/prettier": 2.6.3
     "@types/xo": 0.39.3
     common-tags: 1.8.2
@@ -3626,7 +3626,7 @@ __metadata:
     lodash: 4.17.21
     node-cron: 3.0.1
     node-telegram-bot-api: 0.58.0
-    nodemailer: 6.7.6
+    nodemailer: 6.8.0
     prettier: 2.7.1
     pushbullet: 3.0.0
     simple-sms-sender: 0.1.1
