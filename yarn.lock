@@ -300,10 +300,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node-cron@npm:3.0.2":
-  version: 3.0.2
-  resolution: "@types/node-cron@npm:3.0.2"
-  checksum: 921b1276c793ab6ae095436b8cde8d4d3ab02d8749011bd5b2006a4d921e206ae06de66edd9bccff4b1c09726bad16d9274c1ad104ab2d4370ad910f71cb9db2
+"@types/node-cron@npm:3.0.5":
+  version: 3.0.5
+  resolution: "@types/node-cron@npm:3.0.5"
+  checksum: 40347212fad2b1a82b0590edc6c031ccbb173c3d7e3e01e587268deb78865270d70e6a6e2f54de6a92e666fdde00ce56cc1714578edd2af3c302dcc86b7f7c3c
   languageName: node
   linkType: hard
 
@@ -3392,10 +3392,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-cron@npm:3.0.1":
-  version: 3.0.1
-  resolution: "node-cron@npm:3.0.1"
-  checksum: 98636a3d4373d48b5c7f5b922c93d22ca81a4bd38284f264812c7b88f06c995eb9ccde34ee2753cbec9bf5b77bd220c817c18ca82de504e3e324df9af6983b5d
+"node-cron@npm:3.0.2":
+  version: 3.0.2
+  resolution: "node-cron@npm:3.0.2"
+  dependencies:
+    uuid: 8.3.2
+  checksum: dd21585c0d4069a0752022dad9b8380a4393c4783ec78355ffa99ff32b018c3743a35d4ebf9d7c7863949e94e302b440f58c884eb4960e71c7260d817e2d3f25
   languageName: node
   linkType: hard
 
@@ -3613,7 +3615,7 @@ __metadata:
     "@types/common-tags": 1.8.1
     "@types/lodash": 4.14.188
     "@types/node": 17.0.45
-    "@types/node-cron": 3.0.2
+    "@types/node-cron": 3.0.5
     "@types/node-telegram-bot-api": 0.57.1
     "@types/nodemailer": 6.4.4
     "@types/prettier": 2.6.3
@@ -3624,7 +3626,7 @@ __metadata:
     got: 11.8.5
     load-json-file: 6.2.0
     lodash: 4.17.21
-    node-cron: 3.0.1
+    node-cron: 3.0.2
     node-telegram-bot-api: 0.58.0
     nodemailer: 6.7.6
     prettier: 2.7.1
@@ -4884,6 +4886,15 @@ __metadata:
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
   checksum: 474acf1146cb2701fe3b074892217553dfcf9a031280919ba1b8d651a068c9b15d863b7303cb15bd00a862b498e6cf4ad7b4a08fb134edd5a6f7641681cb54a2
+  languageName: node
+  linkType: hard
+
+"uuid@npm:8.3.2":
+  version: 8.3.2
+  resolution: "uuid@npm:8.3.2"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: 5575a8a75c13120e2f10e6ddc801b2c7ed7d8f3c8ac22c7ed0c7b2ba6383ec0abda88c905085d630e251719e0777045ae3236f04c812184b7c765f63a70e58df
   languageName: node
   linkType: hard
 
