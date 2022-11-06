@@ -15,7 +15,7 @@
   "dependencies": {
     "common-tags": "1.8.2",
     "dotenv": "16.0.1",
-    "env-var": "7.1.1",
+    "env-var": "7.3.0",
     "got": "11.8.5",
     "load-json-file": "6.2.0",
     "lodash": "4.17.21",

@@ -1338,10 +1338,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"env-var@npm:7.1.1":
-  version: 7.1.1
-  resolution: "env-var@npm:7.1.1"
-  checksum: 3392870deeb7241590cdf80214642ac2193dbdf10fa31af22dfb01d5d4a22b0f04798874020975fa7d1ef9ed685618f1cf06085b997f92f7f3f85f27ea658d4d
+"env-var@npm:7.3.0":
+  version: 7.3.0
+  resolution: "env-var@npm:7.3.0"
+  checksum: e62eb12e8fd88d327c1c5c718503273c87fd2f565372cdf0c6997c1b80e3c9fefb23d4e2f137d892f56203379859f0db9f6d9f5406008df654104517e6ef9997
   languageName: node
   linkType: hard
 
@@ -3620,7 +3620,7 @@ __metadata:
     "@types/xo": 0.39.3
     common-tags: 1.8.2
     dotenv: 16.0.1
-    env-var: 7.1.1
+    env-var: 7.3.0
     got: 11.8.5
     load-json-file: 6.2.0
     lodash: 4.17.21
