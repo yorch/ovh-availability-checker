@@ -36,7 +36,7 @@
     "@types/node-cron": "3.0.2",
     "@types/node-telegram-bot-api": "0.57.1",
     "@types/nodemailer": "6.4.4",
-    "@types/prettier": "2.6.3",
+    "@types/prettier": "2.7.1",
     "@types/xo": "0.39.3",
     "prettier": "2.7.1",
     "xo": "0.50.0"
