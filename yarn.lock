@@ -763,7 +763,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bluebird@npm:^3.5.0, bluebird@npm:^3.5.1":
+"bluebird@npm:^3.5.0":
   version: 3.7.2
   resolution: "bluebird@npm:3.7.2"
   checksum: 869417503c722e7dc54ca46715f70e15f4d9c602a423a02c825570862d12935be59ed9c7ba34a9b31f186c017c23cac6b54e35446f8353059c101da73eac22ef
@@ -1118,7 +1118,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:^3.1.0, debug@npm:^3.2.7":
+"debug@npm:^3.2.7":
   version: 3.2.7
   resolution: "debug@npm:3.2.7"
   dependencies:
@@ -1202,13 +1202,6 @@ __metadata:
   version: 1.0.0
   resolution: "delayed-stream@npm:1.0.0"
   checksum: 46fe6e83e2cb1d85ba50bd52803c68be9bd953282fa7096f51fc29edd5d67ff84ff753c51966061e5ba7cb5e47ef6d36a91924eddb7f3f3483b1c560f77a0020
-  languageName: node
-  linkType: hard
-
-"depd@npm:^1.1.1":
-  version: 1.1.2
-  resolution: "depd@npm:1.1.2"
-  checksum: 6b406620d269619852885ce15965272b829df6f409724415e0002c8632ab6a8c0a08ec1f0bd2add05dc7bd7507606f7e2cc034fa24224ab829580040b835ecd9
   languageName: node
   linkType: hard
 
@@ -3417,22 +3410,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-telegram-bot-api@npm:0.58.0":
-  version: 0.58.0
-  resolution: "node-telegram-bot-api@npm:0.58.0"
+"node-telegram-bot-api@npm:0.59.0":
+  version: 0.59.0
+  resolution: "node-telegram-bot-api@npm:0.59.0"
   dependencies:
     array.prototype.findindex: ^2.0.2
     bl: ^1.2.3
-    bluebird: ^3.5.1
-    debug: ^3.1.0
-    depd: ^1.1.1
+    debug: ^3.2.7
     eventemitter3: ^3.0.0
     file-type: ^3.9.0
     mime: ^1.6.0
     pump: ^2.0.0
     request: ^2.83.0
     request-promise: ^4.2.2
-  checksum: ff54f7687e4459df228c81de6c5ba10f5a11de507792a57b27e24da99f8b1222b14b151edceac2d40fa759e5ec9453c63e36d2c154430e9b66a678aeb8ba5af1
+  checksum: 366f810931a0d816008f88764ff32c7468656ac89458b90fecd57f5780a33594effcdff253f5c7aadb5a92a64a13a55e4ae7f67636e23b58dc4239cbb81c61b9
   languageName: node
   linkType: hard
 
@@ -3618,7 +3609,7 @@ __metadata:
     load-json-file: 6.2.0
     lodash: 4.17.21
     node-cron: 3.0.2
-    node-telegram-bot-api: 0.58.0
+    node-telegram-bot-api: 0.59.0
     nodemailer: 6.8.0
     prettier: 2.7.1
     pushbullet: 3.0.0
