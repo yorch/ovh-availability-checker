@@ -3,10 +3,6 @@ import TelegramBot from 'node-telegram-bot-api';
 import { telegram } from '../config';
 import type { Action } from '../types';
 
-// eslint-ignore-next-line node/prefer-global/process
-// @ts-expect-error - Avoid error suggesting to use ['NTBA_FIX_319'] which conflicts with autoformat
-process.env.NTBA_FIX_319 = 'false';
-
 const { botToken, enable, chatId } = telegram;
 
 export const sendTelegram: Action = async ({ content, logger }) => {
