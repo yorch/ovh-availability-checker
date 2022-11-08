@@ -16,7 +16,7 @@
     "common-tags": "1.8.2",
     "dotenv": "16.0.3",
     "env-var": "7.3.0",
-    "got": "11.8.5",
+    "got": "12.5.2",
     "load-json-file": "6.2.0",
     "lodash": "4.17.21",
     "node-cron": "3.0.2",
