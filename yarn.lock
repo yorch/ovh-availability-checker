@@ -3416,9 +3416,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-telegram-bot-api@npm:0.59.0":
-  version: 0.59.0
-  resolution: "node-telegram-bot-api@npm:0.59.0"
+"node-telegram-bot-api@npm:0.60.0":
+  version: 0.60.0
+  resolution: "node-telegram-bot-api@npm:0.60.0"
   dependencies:
     array.prototype.findindex: ^2.0.2
     bl: ^1.2.3
@@ -3429,7 +3429,7 @@ __metadata:
     pump: ^2.0.0
     request: ^2.83.0
     request-promise: ^4.2.2
-  checksum: 366f810931a0d816008f88764ff32c7468656ac89458b90fecd57f5780a33594effcdff253f5c7aadb5a92a64a13a55e4ae7f67636e23b58dc4239cbb81c61b9
+  checksum: a2dab5f7b61db10c84484e70daa716f656654822fb819dc3f385fa6ec0a40d7035809dc9863387e006598b4ded18360daa6a810ea5ff2d251ea2130ddf781d07
   languageName: node
   linkType: hard
 
@@ -3627,7 +3627,7 @@ __metadata:
     load-json-file: 6.2.0
     lodash: 4.17.21
     node-cron: 3.0.2
-    node-telegram-bot-api: 0.59.0
+    node-telegram-bot-api: 0.60.0
     nodemailer: 6.8.0
     prettier: 2.7.1
     pushbullet: 3.0.0
