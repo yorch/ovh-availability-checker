@@ -286,10 +286,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash@npm:4.14.189":
-  version: 4.14.189
-  resolution: "@types/lodash@npm:4.14.189"
-  checksum: 096d1e0954794fb76bd6a0ea443067f02004b53e3c59ac6e3fed88817a1468fc2e6614abdf44341f5e0fdff5f9a3c94a934cc9ff7126e07efbcd94355a21fe45
+"@types/lodash@npm:4.14.191":
+  version: 4.14.191
+  resolution: "@types/lodash@npm:4.14.191"
+  checksum: ba0d5434e10690869f32d5ea49095250157cae502f10d57de0a723fd72229ce6c6a4979576f0f13e0aa9fbe3ce2457bfb9fa7d4ec3d6daba56730a51906d1491
   languageName: node
   linkType: hard
 
@@ -3620,7 +3620,7 @@ __metadata:
   dependencies:
     "@tsconfig/node16-strictest": 1.0.4
     "@types/common-tags": 1.8.1
-    "@types/lodash": 4.14.189
+    "@types/lodash": 4.14.191
     "@types/node": 18.11.15
     "@types/node-cron": 3.0.6
     "@types/node-telegram-bot-api": 0.57.6
