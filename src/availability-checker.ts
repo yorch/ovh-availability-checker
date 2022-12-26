@@ -1,5 +1,6 @@
 import got from 'got';
-import { Dictionary, groupBy } from 'lodash';
+import type { Dictionary } from 'lodash';
+import { groupBy } from 'lodash';
 import { pick } from 'lodash/fp';
 import * as cron from 'node-cron';
 import type { Logger } from './logger';
