@@ -396,12 +396,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/xo@npm:0.39.4":
-  version: 0.39.4
-  resolution: "@types/xo@npm:0.39.4"
+"@types/xo@npm:0.39.5":
+  version: 0.39.5
+  resolution: "@types/xo@npm:0.39.5"
   dependencies:
     "@types/eslint": "*"
-  checksum: 0b3b6fb9e9bc24066093a9fd470438851b08c94ddd70671f498c146c2a110e1eace5a0163ae1f801244ebfad4520fac8aff7d6659453ca5fe4b5a236af9f94f8
+  checksum: 46d03e9a2bb93ffc8a6167a58aada9cd3186ee6c4a6db58359d6848743bbb9be65cf099948c3e71fbc13b11e8c0e842fd3047675693f74acb2d281cca8b7c204
   languageName: node
   linkType: hard
 
@@ -3626,7 +3626,7 @@ __metadata:
     "@types/node-telegram-bot-api": 0.57.6
     "@types/nodemailer": 6.4.7
     "@types/prettier": 2.7.2
-    "@types/xo": 0.39.4
+    "@types/xo": 0.39.5
     common-tags: 1.8.2
     dotenv: 16.0.3
     env-var: 7.3.0
