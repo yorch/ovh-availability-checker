@@ -7,6 +7,7 @@ process.on('SIGTERM', () => {
   process.exit(1);
 });
 
+// eslint-disable-next-line unicorn/prefer-top-level-await
 init().catch((error) => {
   logger.error(error, 'There was an unexpected error executing the program');
 });
