@@ -14,6 +14,11 @@ export const inputFile = env.get('INPUT_FILE').required().asString();
 
 export const cronSchedule = env.get('CRON_SCHEDULE').required().asString();
 
+export const logFilesEnable = env
+  .get('LOG_FILES_ENABLE')
+  .default('true')
+  .asBool();
+
 export const logsDirectory = env.get('LOGS_DIR').default('./logs').asString();
 
 export const logLevel = env.get('LOG_LEVEL').default('info').asString();
