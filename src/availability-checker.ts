@@ -39,7 +39,7 @@ export class AvailabilityChecker {
     );
     this.url = url;
 
-    this.logger.debug('Servers to check', this.serversToCheck);
+    this.logger.debug({ servers: this.serversToCheck }, 'Checking servers');
   }
 
   async run() {
@@ -94,7 +94,7 @@ export class AvailabilityChecker {
         })
       );
     } catch (error) {
-      this.logger.error('There was an error executing actions', error);
+      this.logger.error(error, 'There was an error executing actions');
     }
   }
 
@@ -105,8 +105,8 @@ export class AvailabilityChecker {
       } catch (error) {
         // TODO: Add more info about current action
         this.logger.error(
-          `There was an error executing action ${action.name}`,
-          error
+          error,
+          `There was an error executing action ${action.name}`
         );
       }
     };

@@ -46,6 +46,6 @@ export const sendEmail: Action = async ({ content, logger }) => {
     // logger.info(`Preview URL: ${nodemailer.getTestMessageUrl(info)}`);
     // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
   } catch (error) {
-    logger.error(`Could not send the email`, error);
+    logger.error(error, 'Could not send the email');
   }
 };
