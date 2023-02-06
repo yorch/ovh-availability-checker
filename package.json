@@ -22,11 +22,11 @@
     "node-cron": "3.0.2",
     "node-telegram-bot-api": "0.60.0",
     "nodemailer": "6.8.0",
+    "pino": "8.9.0",
     "pushbullet": "3.0.0",
     "simple-sms-sender": "0.1.1",
     "ts-node": "10.9.1",
-    "typescript": "4.9.4",
-    "winston": "3.8.2"
+    "typescript": "4.9.4"
   },
   "devDependencies": {
     "@tsconfig/node16-strictest": "1.0.4",
