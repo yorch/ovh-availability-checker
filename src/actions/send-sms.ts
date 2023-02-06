@@ -26,6 +26,7 @@ export const sendSms: Action = async ({ content, logger }) => {
   const smsSender = new SmsSender({
     accountSid,
     fromNumber: from,
+    // @ts-expect-error - Fix typing and making sure `simple-sms-sender` can work with Pino
     logger,
     secret,
     sid,
