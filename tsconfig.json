@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@tsconfig/node16-strictest/tsconfig.json",
+  "extends": "@tsconfig/node18-strictest/tsconfig.json",
   "compilerOptions": {
     // "outDir": "./build"
     "noImplicitAny": true /* Enable error reporting for expressions and declarations with an implied `any` type.. */,
