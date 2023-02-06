@@ -1,41 +1,84 @@
+import os from 'os';
 import path from 'node:path';
-import { createLogger, format, transports } from 'winston';
-import { logsDirectory, nodeEnv } from './config';
+import pino, { TransportTargetOptions } from 'pino';
+import { datasetLogger, isProduction, logLevel, logsDirectory } from './config';
+import { exists } from './utils';
 
-const { combine, timestamp } = format;
+const stdOutTarget: TransportTargetOptions = {
+  target: 'pino/file',
+  level: logLevel,
+  options: {},
+};
 
-// TODO: Move out
-// const serviceName = 'ovh-availability-checker';
+const fileErrorTarget: TransportTargetOptions = {
+  target: 'pino/file',
+  level: 'error',
+  options: {
+    destination: path.join(logsDirectory, 'error.log'),
+    mkdir: true,
+  },
+};
 
-export const logger = createLogger({
-  level: 'info',
-  format: combine(timestamp(), format.json()),
-  // DefaultMeta: { service: serviceName },
-  transports: [
-    //
-    // - Write to all logs with level `info` and below to `combined.log`
-    // - Write all logs error (and below) to `error.log`.
-    //
-    new transports.File({
-      filename: path.join(logsDirectory, 'error.log'),
-      level: 'error',
-    }),
-    new transports.File({
-      filename: path.join(logsDirectory, 'combined.log'),
-    }),
-  ],
+const fileTarget: TransportTargetOptions = {
+  target: 'pino/file',
+  level: logLevel,
+  options: {
+    destination: path.join(logsDirectory, 'combined.log'),
+    mkdir: true,
+  },
+};
+
+const pinoPrettyTarget = {
+  target: 'pino-pretty',
+  level: logLevel,
+  options: {
+    colorize: true,
+    ignore: 'pid,hostname',
+    // TranslateTime: 'yyyy/mm/dd HH:MM:ss Z',
+    translateTime: 'HH:MM:ss Z',
+  },
+};
+
+const dataSetTarget = datasetLogger.enable
+  ? {
+      target: 'pino-dataset-transport',
+      level: logLevel,
+      options: {
+        loggerOptions: {
+          apiKey: datasetLogger.apiKey,
+          ...(datasetLogger.serverUrl
+            ? { serverUrl: datasetLogger.serverUrl }
+            : {}),
+          sessionInfo: {
+            // TODO: Add build time, version and SHA
+            serverHost: os.hostname(),
+            logfile: 'app.log',
+            osHomedir: os.homedir(),
+            osPlatform: os.platform(),
+            osRelease: os.release(),
+            osType: os.type(),
+            osVersion: os.version(),
+            userInfo: os.userInfo(),
+          },
+          shouldFlattenAttributes: true,
+        },
+      },
+    }
+  : undefined;
+
+export const logger = pino({
+  transport: {
+    targets: [
+      // To make sure we always print to console regardless if production or not
+      isProduction ? stdOutTarget : pinoPrettyTarget,
+      dataSetTarget,
+      fileErrorTarget,
+      fileTarget,
+    ].filter(exists),
+  },
+  level: logLevel,
 });
 
-export type Logger = ReturnType<typeof createLogger>;
+export const createChildLogger = (module: string) => logger.child({ module });
 
-//
-// If we're not in production then log to the `console` with the format:
-// `${info.level}: ${info.message} JSON.stringify({ ...rest }) `
-//
-if (nodeEnv !== 'production') {
-  logger.add(
-    new transports.Console({
-      format: format.simple(),
-    })
-  );
-}
+export type Logger = pino.Logger;
