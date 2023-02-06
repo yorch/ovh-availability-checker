@@ -23,6 +23,6 @@ export const sendTelegram: Action = async ({ content, logger }) => {
 
     logger.info(`Telegram message sent: ${message_id}`);
   } catch (error) {
-    logger.error('Could not send Telegram message', error);
+    logger.error(error, 'Could not send Telegram message');
   }
 };

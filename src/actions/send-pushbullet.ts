@@ -24,6 +24,6 @@ export const sendPushbullet: Action = async ({ content, logger }) => {
     logger.info(`Pushbullet sent!`);
     logger.debug(`Pushbullet: ${String(response || '')}`);
   } catch (error) {
-    logger.error(`Could not send pushbullet`, error);
+    logger.error(error, 'Could not send pushbullet');
   }
 };

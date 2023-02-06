@@ -8,5 +8,5 @@ process.on('SIGTERM', () => {
 });
 
 init().catch((error) => {
-  logger.error('There was an unexpected error executing the program', error);
+  logger.error(error, 'There was an unexpected error executing the program');
 });
