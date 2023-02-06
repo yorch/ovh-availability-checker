@@ -1,7 +1,13 @@
 import os from 'os';
 import path from 'node:path';
 import pino, { TransportTargetOptions } from 'pino';
-import { datasetLogger, isProduction, logLevel, logsDirectory } from './config';
+import {
+  datasetLogger,
+  isProduction,
+  logFilesEnable,
+  logLevel,
+  logsDirectory,
+} from './config';
 import { exists } from './utils';
 
 const stdOutTarget: TransportTargetOptions = {
@@ -72,8 +78,7 @@ export const logger = pino({
       // To make sure we always print to console regardless if production or not
       isProduction ? stdOutTarget : pinoPrettyTarget,
       dataSetTarget,
-      fileErrorTarget,
-      fileTarget,
+      ...(logFilesEnable ? [fileErrorTarget, fileTarget] : []),
     ].filter(exists),
   },
   level: logLevel,
