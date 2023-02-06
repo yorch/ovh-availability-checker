@@ -16,7 +16,17 @@ export const cronSchedule = env.get('CRON_SCHEDULE').required().asString();
 
 export const logsDirectory = env.get('LOGS_DIR').default('./logs').asString();
 
+export const logLevel = env.get('LOG_LEVEL').default('info').asString();
+
 export const nodeEnv = env.get('NODE_ENV').default('development').asString();
+
+export const isProduction = nodeEnv === 'production';
+
+export const datasetLogger = {
+  enable: env.get('DATASET_LOGGER_ENABLE').default('false').asBool(),
+  apiKey: env.get('DATASET_LOGGER_API_KEY').asString(),
+  serverUrl: env.get('DATASET_LOGGER_SERVER_URL').asString(),
+};
 
 export const email = {
   enable: env.get('EMAIL_ENABLE').default('false').asBool(),
