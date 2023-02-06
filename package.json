@@ -4,7 +4,7 @@
   "description": "OVH Servers Availability Checker",
   "main": "src/index.ts",
   "scripts": {
-    "start": "ts-node --esm .",
+    "start": "ts-node .",
     "test": "xo",
     "lint": "xo",
     "prettier": "prettier ."
