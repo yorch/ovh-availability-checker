@@ -1,6 +1,7 @@
-import os from 'os';
+import os from 'node:os';
 import path from 'node:path';
-import pino, { TransportTargetOptions } from 'pino';
+import pino from 'pino';
+import type { TransportTargetOptions } from 'pino';
 import {
   datasetLogger,
   isProduction,
@@ -79,7 +80,7 @@ export const logger = pino({
       isProduction ? stdOutTarget : pinoPrettyTarget,
       dataSetTarget,
       ...(logFilesEnable ? [fileErrorTarget, fileTarget] : []),
-    ].filter(exists),
+    ].filter(exists), // eslint-disable-line unicorn/no-array-callback-reference
   },
   level: logLevel,
 });
