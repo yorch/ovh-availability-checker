@@ -171,17 +171,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsconfig/node16-strictest@npm:1.0.4":
-  version: 1.0.4
-  resolution: "@tsconfig/node16-strictest@npm:1.0.4"
-  checksum: f644352bdb0d5f9c42bfe22d9b3c3b18447fa5e1ff4e99b758392856ee5a478daf525fa1ebbae8157980d47c32109302996a235710a0a158eb6980efe3dd5de6
-  languageName: node
-  linkType: hard
-
 "@tsconfig/node16@npm:^1.0.2":
   version: 1.0.3
   resolution: "@tsconfig/node16@npm:1.0.3"
   checksum: 3a8b657dd047495b7ad23437d6afd20297ce90380ff0bdee93fc7d39a900dbd8d9e26e53ff6b465e7967ce2adf0b218782590ce9013285121e6a5928fbd6819f
+  languageName: node
+  linkType: hard
+
+"@tsconfig/node18-strictest@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@tsconfig/node18-strictest@npm:1.0.0"
+  checksum: 551f103b0f08cfb01ac22142193964d5cc5f8f077be2cc39ea3c6046161809ec7eef5d2686905ef04fab6fe62011253ce32516943faf72b57a8ac27bd15fa231
   languageName: node
   linkType: hard
 
@@ -3737,7 +3737,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ovh-availability-checker@workspace:."
   dependencies:
-    "@tsconfig/node16-strictest": 1.0.4
+    "@tsconfig/node18-strictest": 1.0.0
     "@types/common-tags": 1.8.1
     "@types/lodash": 4.14.191
     "@types/node": 18.11.19

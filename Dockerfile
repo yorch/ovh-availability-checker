@@ -17,13 +17,7 @@ LABEL \
 
 RUN apk add --no-cache openssl
 
-ENV DOCKERIZE_VERSION v0.6.1
-RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-alpine-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
-    && tar -C /usr/local/bin -xzvf dockerize-alpine-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
-    && rm dockerize-alpine-linux-amd64-$DOCKERIZE_VERSION.tar.gz
-
-ENV WORKDIR=/app
-WORKDIR $WORKDIR
+WORKDIR /app
 
 COPY package.json yarn.lock .yarnrc.yml ./
 COPY .yarn ./.yarn
@@ -32,14 +26,6 @@ RUN yarn install --immutable \
 COPY . .
 
 ENV NODE_ENV production
+ENV LOG_FILES_ENABLE false
 
-ENV LOG_FILE=${WORKDIR}/logs/combined.log
-ENV LOG_ERROR_FILE=${WORKDIR}/logs/error.log
-
-CMD mkdir -p ${WORKDIR}/logs && \
-    touch ${LOG_FILE} && \
-    touch ${LOG_ERROR_FILE} && \
-    dockerize \
-    -stdout ${LOG_FILE} \
-    -stderr ${LOG_ERROR_FILE} \
-    yarn start
+CMD yarn start
