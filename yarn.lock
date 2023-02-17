@@ -289,13 +289,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node-telegram-bot-api@npm:0.57.6":
-  version: 0.57.6
-  resolution: "@types/node-telegram-bot-api@npm:0.57.6"
+"@types/node-telegram-bot-api@npm:0.61.1":
+  version: 0.61.1
+  resolution: "@types/node-telegram-bot-api@npm:0.61.1"
   dependencies:
     "@types/node": "*"
     "@types/request": "*"
-  checksum: dc2f38305599450a8c122755628465c91ad4b51379dc1239653bf56ebe951f0b385e5e7a63a4423729c409c1f6a6aa62bcac3c27b02069916f2714a0c2695786
+  checksum: 3fc7b937a3513ef66378bf7717412a0fcfceefe13ebe5e68ae09a522c1d72ced8d7e591f774ab788894a187be6646981803d41f032c52ba5d49c977b9bbbe348
   languageName: node
   linkType: hard
 
@@ -3742,7 +3742,7 @@ __metadata:
     "@types/lodash": 4.14.191
     "@types/node": 18.11.19
     "@types/node-cron": 3.0.7
-    "@types/node-telegram-bot-api": 0.57.6
+    "@types/node-telegram-bot-api": 0.61.1
     "@types/nodemailer": 6.4.7
     "@types/prettier": 2.7.2
     "@types/xo": 0.39.5
