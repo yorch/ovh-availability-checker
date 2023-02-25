@@ -3764,7 +3764,7 @@ __metadata:
     nodemailer: 6.9.1
     pino: 8.10.0
     pino-dataset-transport: 1.0.1
-    pino-pretty: 9.2.0
+    pino-pretty: 9.4.0
     prettier: 2.8.3
     pushbullet: 3.0.0
     simple-sms-sender: 0.1.1
@@ -3939,9 +3939,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pino-pretty@npm:9.2.0":
-  version: 9.2.0
-  resolution: "pino-pretty@npm:9.2.0"
+"pino-pretty@npm:9.4.0":
+  version: 9.4.0
+  resolution: "pino-pretty@npm:9.4.0"
   dependencies:
     colorette: ^2.0.7
     dateformat: ^4.6.3
@@ -3959,7 +3959,7 @@ __metadata:
     strip-json-comments: ^3.1.1
   bin:
     pino-pretty: bin.js
-  checksum: 28fc4eca16931419a0a8a5696ce511f37d1e57ad67b4b06510b3fd2772a3e6335eb137630b5186c0410980093a7e05d2f55175b2cda540a638f692aba2a2dc20
+  checksum: 4870d44879048219003b0c6f28181ca871e62c1d9679b07b3f3d703e961284b5b0df495e4be95954a0e467ded34f2323bc9cf3280c3a143311b364a733a08e03
   languageName: node
   linkType: hard
 
