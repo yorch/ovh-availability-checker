@@ -40,7 +40,7 @@
     "@types/nodemailer": "6.4.7",
     "@types/prettier": "2.7.2",
     "@types/xo": "0.39.5",
-    "prettier": "2.8.3",
+    "prettier": "2.8.5",
     "xo": "0.53.1"
   },
   "engineStrict": true,
