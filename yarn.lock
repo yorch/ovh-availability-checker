@@ -306,10 +306,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.13.0":
-  version: 18.13.0
-  resolution: "@types/node@npm:18.13.0"
-  checksum: 4ea10f8802848b01672bce938f678b6774ca2cee0c9774f12275ab064ae07818419c3e2e41d6257ce7ba846d1ea26c63214aa1dfa4166fa3746291752b8c6416
+"@types/node@npm:18.15.8":
+  version: 18.15.8
+  resolution: "@types/node@npm:18.15.8"
+  checksum: 795695b9f5bbfaea864261d3179da530dbe8c615bd525d6afcaa0d508f0b73f252507b54c735b1d744932677e30f55161bbe9b78487a60bd6a93b2d03027d30d
   languageName: node
   linkType: hard
 
@@ -3747,7 +3747,7 @@ __metadata:
     "@tsconfig/node18-strictest": 1.0.0
     "@types/common-tags": 1.8.1
     "@types/lodash": 4.14.191
-    "@types/node": 18.13.0
+    "@types/node": 18.15.8
     "@types/node-cron": 3.0.7
     "@types/node-telegram-bot-api": 0.61.1
     "@types/nodemailer": 6.4.7
