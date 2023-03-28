@@ -34,7 +34,7 @@
     "@tsconfig/node18-strictest": "1.0.0",
     "@types/common-tags": "1.8.1",
     "@types/lodash": "4.14.191",
-    "@types/node": "18.13.0",
+    "@types/node": "18.15.10",
     "@types/node-cron": "3.0.7",
     "@types/node-telegram-bot-api": "0.61.1",
     "@types/nodemailer": "6.4.7",
