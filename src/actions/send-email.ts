@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
-import { email } from '../config';
-import type { Action } from '../types';
+import { email } from '../config.js';
+import type { Action } from '../types.js';
 
 const {
   enable,

@@ -1,7 +1,7 @@
 // https://github.com/yagop/node-telegram-bot-api/blob/master/src/telegram.js#L64-L84
 import TelegramBot from 'node-telegram-bot-api';
-import { telegram } from '../config';
-import type { Action } from '../types';
+import { telegram } from '../config.js';
+import type { Action } from '../types.js';
 
 const { botToken, enable, chatId } = telegram;
 

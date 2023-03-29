@@ -1,8 +1,13 @@
-import { sendEmail, sendPushbullet, sendSms, sendTelegram } from './actions';
-import { AvailabilityChecker } from './availability-checker';
-import { availabilityUrl, cronSchedule } from './config';
-import { logger } from './logger';
-import { readInputFile } from './read-input-file';
+import {
+  sendEmail,
+  sendPushbullet,
+  sendSms,
+  sendTelegram,
+} from './actions/index.js';
+import { AvailabilityChecker } from './availability-checker.js';
+import { availabilityUrl, cronSchedule } from './config.js';
+import { logger } from './logger.js';
+import { readInputFile } from './read-input-file.js';
 
 export const init = async () => {
   if (!availabilityUrl) {

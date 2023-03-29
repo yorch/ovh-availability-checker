@@ -1,6 +1,6 @@
 // eslint-disable node/prefer-global/process
-import { init } from './init';
-import { logger } from './logger';
+import { init } from './init.js';
+import { logger } from './logger.js';
 
 process.on('SIGTERM', () => {
   logger.info('Got a SIGTERM, exiting');
