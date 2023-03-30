@@ -38,6 +38,20 @@ export type HardwareAvailability = {
   datacenters: DatacenterAvailability[];
 };
 
+export type Server = {
+  id: string;
+  model: string;
+  provider: string;
+  cpu: string;
+  cpuCores: string;
+  cpuFreq: string;
+  ram: string;
+  disk: string;
+  network: string;
+  priceMonthly: number;
+  installationFee: number;
+};
+
 export type ServerToCheck = {
   enable: boolean;
   name: string;
