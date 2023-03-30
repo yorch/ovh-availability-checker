@@ -1,4 +1,5 @@
 .env
 .git
+build/
 logs/
 node_modules/
