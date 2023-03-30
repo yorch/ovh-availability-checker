@@ -1,4 +1,4 @@
-import loadJsonFile from 'load-json-file';
+import { loadJsonFile } from 'load-json-file';
 import { inputFile } from './config.js';
 import type { ServersToCheck } from './types.js';
 
