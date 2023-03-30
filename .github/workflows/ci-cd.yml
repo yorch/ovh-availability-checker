@@ -37,6 +37,7 @@ jobs:
         run: yarn build
 
   build-docker:
+    needs: build-nodejs
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
