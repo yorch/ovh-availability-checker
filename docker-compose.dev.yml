@@ -2,9 +2,8 @@ version: '3.7'
 
 services:
   node:
-    image: ghcr.io/yorch/ovh-availability-checker
+    build: .
     container_name: ovh-availability-checker
-    restart: unless-stopped
     volumes:
       - ./servers.json:/app/servers.json
     env_file: .env

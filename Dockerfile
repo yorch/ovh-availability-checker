@@ -11,7 +11,8 @@ COPY . .
 
 RUN yarn build
 
-RUN yarn prod-install prod
+RUN yarn prod-install out
+RUN mv build out/build
 
 RUN rm -rf prod/.yarn/
 
@@ -22,8 +23,7 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-COPY --from=builder /app/prod   .
-COPY --from=builder /app/build  ./build
+COPY --from=builder /app/out   .
 
 ENV NODE_ENV production
 ENV LOG_FILES_ENABLE false
