@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [main]
 
+env:
+  GITHUB_DOCKER_REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
 jobs:
   build-nodejs:
     runs-on: ubuntu-latest
@@ -33,6 +37,7 @@ jobs:
         run: yarn build
 
   build-docker:
+    needs: build-nodejs
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -40,23 +45,46 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
-      # - name: Login to Docker Hub
-      #   uses: docker/login-action@v2
-      #   with:
-      #     username: ${{ secrets.DOCKERHUB_USERNAME }}
-      #     password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Log in to the Container registry
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v2
+        with:
+          registry: ${{ env.GITHUB_DOCKER_REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build
+      - name: Login to Docker Hub
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          # images: ${{ env.GITHUB_DOCKER_REGISTRY }}/${{ env.IMAGE_NAME }}
+          # Passing two images, one for Docker Hub and one for GitHub Container Registry.
+          images: |
+            ${{ env.IMAGE_NAME }}
+            ${{ env.GITHUB_DOCKER_REGISTRY }}/${{ env.IMAGE_NAME }}
+
+      - name: Build and Push
         uses: docker/build-push-action@v4
         with:
-          push: false
-          tags: yorch/ovh-availability-checker:latest
+          context: .
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
 
-      - name: Run the Docker container
-        run: docker run -d --name checker yorch/ovh-availability-checker
+      # TODO: Find a better to test the container.
+      # In PRs, it will download the image from the registry instead of testing the one from this PR.
+      # - name: Run the Docker container
+      #   run: docker run -d --name checker ${{ env.IMAGE_NAME }}
 
-      - name: Check Docker container logs
-        run: docker logs checker
+      # - name: Check Docker container logs
+      #   run: docker logs checker
 
-      - name: List all containers
-        run: docker ps -a
+      # - name: List all containers
+      #   run: docker ps -a
