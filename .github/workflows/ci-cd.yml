@@ -7,7 +7,6 @@ on:
     branches: [main]
 
 env:
-  NOT_PR: ${{ github.event_name != 'pull_request' }}
   GITHUB_DOCKER_REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
 
@@ -73,15 +72,17 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          push: ${{ env.NOT_PR }}
+          push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
-      - name: Run the Docker container
-        run: docker run -d --name checker ${{ env.IMAGE_NAME }}
+      # TODO: Find a better to test the container.
+      # In PRs, it will download the image from the registry instead of testing the one from this PR.
+      # - name: Run the Docker container
+      #   run: docker run -d --name checker ${{ env.IMAGE_NAME }}
 
-      - name: Check Docker container logs
-        run: docker logs checker
+      # - name: Check Docker container logs
+      #   run: docker logs checker
 
-      - name: List all containers
-        run: docker ps -a
+      # - name: List all containers
+      #   run: docker ps -a
