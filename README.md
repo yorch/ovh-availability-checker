@@ -30,7 +30,13 @@ yarn start
 The following command will build the Docker image, based on a NodeJS Alpine image, so should have a fairly small footprint, and spin it up in the background:
 
 ```bash
-docker-compose up -d
+docker compose up -f docker-compose.dev.yml -d
+```
+
+You can also use the Docker image directly from GitHub Container Registry with the following command:
+
+```bash
+docker compose up -d
 ```
 
 You can easily use it out of the box and run it in a headless server like a cheap VPS using Docker. It will run in the background, even after you have logged out of the server.
