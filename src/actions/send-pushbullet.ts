@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call */
-import { pushbullet } from '../config';
-import type { Action } from '../types';
+import { pushbullet } from '../config.js';
+import type { Action } from '../types.js';
 
 const { apiToken, enable, deviceId, noteTitle } = pushbullet;
 

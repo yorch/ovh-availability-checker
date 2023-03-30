@@ -8,8 +8,8 @@ import {
   logFilesEnable,
   logLevel,
   logsDirectory,
-} from './config';
-import { exists } from './utils';
+} from './config.js';
+import { exists } from './utils.js';
 
 const stdOutTarget: TransportTargetOptions = {
   target: 'pino/file',

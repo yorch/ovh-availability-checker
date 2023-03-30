@@ -3,8 +3,10 @@
   "version": "2.1.0",
   "description": "OVH Servers Availability Checker",
   "main": "src/index.ts",
+  "type": "module",
   "scripts": {
-    "start": "ts-node .",
+    "start": "ts-node --esm src/index.ts",
+    "build": "tsc",
     "test": "xo",
     "lint": "xo",
     "prettier": "prettier ."
@@ -52,7 +54,6 @@
     "prettier": true,
     "rules": {
       "import/extensions": 0,
-      "n/prefer-global/process": 0,
       "@typescript-eslint/no-implicit-any-catch": 0
     }
   }
