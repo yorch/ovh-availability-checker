@@ -69,6 +69,9 @@ jobs:
           images: |
             ${{ env.IMAGE_NAME }}
             ${{ env.GITHUB_DOCKER_REGISTRY }}/${{ env.IMAGE_NAME }}
+          # Set latest tag for default branch
+          tags: |
+            type=raw,value=latest,enable={{is_default_branch}}
 
       - name: Build and Push
         uses: docker/build-push-action@v4
