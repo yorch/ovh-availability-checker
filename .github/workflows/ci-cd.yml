@@ -64,6 +64,7 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           # images: ${{ env.GITHUB_DOCKER_REGISTRY }}/${{ env.IMAGE_NAME }}
+          # Passing two images, one for Docker Hub and one for GitHub Container Registry.
           images: |
             ${{ env.IMAGE_NAME }}
             ${{ env.GITHUB_DOCKER_REGISTRY }}/${{ env.IMAGE_NAME }}
