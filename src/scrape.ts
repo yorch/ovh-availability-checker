@@ -1,6 +1,6 @@
 import jsonfile from 'jsonfile';
 import { logger } from './logger.js';
-import { scrapeServers } from './scrape/servers.js';
+import { scrapeServers } from './scrape/scrape-servers.js';
 
 const FILENAME = 'scrapped-servers.json';
 

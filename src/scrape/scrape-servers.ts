@@ -12,10 +12,10 @@ export const scrapeServers = async () => {
         id: {
           attr: 'data-product-id',
         },
-        // model: {
-        //   selector: 'td',
-        //   eq: 0,
-        // },
+        model: {
+          selector: '[data-product-specs=""] > div',
+          attr: 'data-plancode',
+        },
         provider: {
           selector: '.ods-badge--default',
         },
