@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "ts-node --esm src/index.ts",
+    "scrape": "ts-node --esm src/scrape.ts",
     "build": "tsc",
     "lint": "xo",
     "format": "prettier --write .",
