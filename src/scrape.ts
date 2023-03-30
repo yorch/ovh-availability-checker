@@ -1,11 +1,13 @@
 import jsonfile from 'jsonfile';
+import { logger } from './logger.js';
 import { scrapeServers } from './scrape/servers.js';
+
+const FILENAME = 'scrapped-servers.json';
 
 (async () => {
   const { servers, status } = await scrapeServers();
-  console.log(`Status Code: ${status}`);
-  console.log('Servers: ', JSON.stringify(servers, null, 2));
-  console.log(`Obtained ${servers.length} servers`);
+  logger.info(`Status Code: ${status}`);
+  logger.info(`Obtained ${servers.length} servers and saved to ${FILENAME}`);
 
-  await jsonfile.writeFile('kimsufi.json', servers);
+  await jsonfile.writeFile(FILENAME, servers, { spaces: 2 });
 })();
