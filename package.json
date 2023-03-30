@@ -54,7 +54,6 @@
     "prettier": true,
     "rules": {
       "import/extensions": 0,
-      "n/prefer-global/process": 0,
       "@typescript-eslint/no-implicit-any-catch": 0
     }
   }
