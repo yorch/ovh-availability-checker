@@ -7,9 +7,9 @@
   "scripts": {
     "start": "ts-node --esm src/index.ts",
     "build": "tsc",
-    "test": "xo",
     "lint": "xo",
-    "prettier": "prettier ."
+    "format": "prettier --write .",
+    "cleanup": "rm -rf build/"
   },
   "author": "Jorge Barnaby <jorge {dot} barnaby {at} gmail {dot} com",
   "license": "MIT",
