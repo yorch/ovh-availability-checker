@@ -1,7 +1,10 @@
-import { from, logger } from 'env-var';
+/* eslint-disable n/prefer-global/process */
+import dotEnv from 'dotenv';
+import envVar from 'env-var';
 
-// eslint-disable-next-line unicorn/prefer-module, @typescript-eslint/no-var-requires, @typescript-eslint/no-require-imports, @typescript-eslint/no-unsafe-call
-require('dotenv').config();
+dotEnv.config();
+
+const { from, logger } = envVar;
 
 const env = from(process.env, {}, logger);
 

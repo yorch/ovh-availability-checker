@@ -1,7 +1,7 @@
 import got from 'got';
 import type { Dictionary } from 'lodash';
-import { groupBy } from 'lodash';
-import { pick } from 'lodash/fp';
+import lodash from 'lodash';
+import pick from 'lodash/fp/pick.js';
 import * as cron from 'node-cron';
 import type { Logger } from './logger.js';
 import type {
@@ -11,6 +11,8 @@ import type {
   ServersAvailable,
   ServersToCheck,
 } from './types.js';
+
+const { groupBy } = lodash;
 
 const unavailableStates = new Set(['unavailable', 'unknown']);
 
