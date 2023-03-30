@@ -2,11 +2,11 @@ import jsonfile from 'jsonfile';
 import { logger } from './logger.js';
 import { scrapeServers } from './scrape/scrape-servers.js';
 
-const FILENAME = 'scrapped-servers.json';
+const filename = 'scrapped-servers.json';
 
 const { servers, status } = await scrapeServers();
 
 logger.info(`Status Code: ${status}`);
-logger.info(`Obtained ${servers.length} servers and saved to ${FILENAME}`);
+logger.info(`Obtained ${servers.length} servers and saved to ${filename}`);
 
-await jsonfile.writeFile(FILENAME, servers, { spaces: 2 });
+await jsonfile.writeFile(filename, servers, { spaces: 2 });

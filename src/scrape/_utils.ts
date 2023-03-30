@@ -3,6 +3,7 @@ export const cleanupText = (txt: string) =>
     .replace(/\r\n|\r|\n/g, '')
     .replace(/ {2}/g, '')
     .replace(
+      // eslint-disable-next-line no-irregular-whitespace
       /[\u00A0\u1680​\u180E\u2000-\u2009\u200A\u200B\u202F\u205F\u3000]/g,
       ' '
     )
