@@ -2,7 +2,8 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "@tsconfig/node18-strictest/tsconfig.json",
   "compilerOptions": {
-    // "outDir": "./build"
+    "module": "es2022",
+    "outDir": "./build",
     "noImplicitAny": true /* Enable error reporting for expressions and declarations with an implied `any` type.. */,
     "strictNullChecks": true /* When type checking, take into account `null` and `undefined`. */,
     "strictFunctionTypes": true /* When assigning functions, check to ensure parameters and the return values are subtype-compatible. */,
