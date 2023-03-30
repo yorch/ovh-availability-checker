@@ -51,10 +51,6 @@
   },
   "packageManager": "yarn@3.5.0",
   "xo": {
-    "prettier": true,
-    "rules": {
-      "import/extensions": 0,
-      "@typescript-eslint/no-implicit-any-catch": 0
-    }
+    "prettier": true
   }
 }
