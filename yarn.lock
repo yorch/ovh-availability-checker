@@ -373,10 +373,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.16.2":
-  version: 18.16.2
-  resolution: "@types/node@npm:18.16.2"
-  checksum: 7ad66d23b3b93885a9f879bff98e0196790ad35589b47a3d81b52db969ad17ee298082020296df5166c2d72d3cd6a4b9ab34d254483637d967944a4b3e6febdb
+"@types/node@npm:20.2.5":
+  version: 20.2.5
+  resolution: "@types/node@npm:20.2.5"
+  checksum: 38ce7c7e9d76880dc632f71d71e0d5914fcda9d5e9a7095d6c339abda55ca4affb0f2a882aeb29398f8e09d2c5151f0b6586c81c8ccdfe529c34b1ea3337425e
   languageName: node
   linkType: hard
 
@@ -4165,7 +4165,7 @@ __metadata:
     "@types/common-tags": 1.8.1
     "@types/jsonfile": 6.1.1
     "@types/lodash": 4.14.194
-    "@types/node": 18.16.2
+    "@types/node": 20.2.5
     "@types/node-cron": 3.0.7
     "@types/node-telegram-bot-api": 0.61.6
     "@types/nodemailer": 6.4.7
