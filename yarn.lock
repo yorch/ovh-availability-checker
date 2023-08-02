@@ -4183,7 +4183,7 @@ __metadata:
     nodemailer: 6.9.4
     pino: 8.14.2
     pino-dataset-transport: 1.0.1
-    pino-pretty: 10.0.0
+    pino-pretty: 10.2.0
     prettier: 2.8.8
     pushbullet: 3.0.0
     scrape-it: 6.0.1
@@ -4385,9 +4385,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pino-pretty@npm:10.0.0":
-  version: 10.0.0
-  resolution: "pino-pretty@npm:10.0.0"
+"pino-pretty@npm:10.2.0":
+  version: 10.2.0
+  resolution: "pino-pretty@npm:10.2.0"
   dependencies:
     colorette: ^2.0.7
     dateformat: ^4.6.3
@@ -4405,7 +4405,7 @@ __metadata:
     strip-json-comments: ^3.1.1
   bin:
     pino-pretty: bin.js
-  checksum: af45c69fdb50bdd27875d1456b7f2a7227bc1b98ca8b39ff3a4ef0c473ac8bd2ae1cb7de19921dc8cc0217b6d5f800c7af040eae294e5cc26e0fadf0a0a4afd7
+  checksum: 8e8220ab647d11e05349adde37aac116dab1a96ce479297820475b7e2246ea5e56e3764b625c5877821ae66dcea62bdda563cc49eccbd4628c80952998068f48
   languageName: node
   linkType: hard
 
