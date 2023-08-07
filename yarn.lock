@@ -4183,7 +4183,7 @@ __metadata:
     node-cron: 3.0.2
     node-telegram-bot-api: 0.61.0
     nodemailer: 6.9.4
-    pino: 8.14.2
+    pino: 8.15.0
     pino-dataset-transport: 1.0.1
     pino-pretty: 10.2.0
     prettier: 3.0.0
@@ -4418,9 +4418,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pino@npm:8.14.2":
-  version: 8.14.2
-  resolution: "pino@npm:8.14.2"
+"pino@npm:8.15.0":
+  version: 8.15.0
+  resolution: "pino@npm:8.15.0"
   dependencies:
     atomic-sleep: ^1.0.0
     fast-redact: ^3.1.1
@@ -4435,7 +4435,7 @@ __metadata:
     thread-stream: ^2.0.0
   bin:
     pino: bin.js
-  checksum: 9b777472be2d57a3120f7fd39090d04eacd3af1b25d74ebf606defb9c34fd587820f91ca12bfe52e61330e5fd9f72f67db98293c0ff8c77893e855a65f1dadf0
+  checksum: 9a54d0757f0256201fad01346be1c18b0a4378704fa383df867189da12151d664d2bd18b1e53df70633fbff6c90fd3175228c0c971eaaa734939709cc1a0005b
   languageName: node
   linkType: hard
 
