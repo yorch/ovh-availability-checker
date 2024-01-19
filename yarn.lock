@@ -356,12 +356,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jsonfile@npm:6.1.1":
-  version: 6.1.1
-  resolution: "@types/jsonfile@npm:6.1.1"
+"@types/jsonfile@npm:6.1.4":
+  version: 6.1.4
+  resolution: "@types/jsonfile@npm:6.1.4"
   dependencies:
     "@types/node": "*"
-  checksum: 0f8fe0a9221a00e8413cffba723dfe16553868724b830237256fb0052ecd5cac96498189d1235a001cfa815f352008261c9ceb373f0aa58227f891e0c7a12c4d
+  checksum: 309fda20eb5f1cf68f2df28931afdf189c5e7e6bec64ac783ce737bb98908d57f6f58757ad5da9be37b815645a6f914e2d4f3ac66c574b8fe1ba6616284d0e97
   languageName: node
   linkType: hard
 
@@ -4147,7 +4147,7 @@ __metadata:
   dependencies:
     "@tsconfig/node18-strictest": 1.0.0
     "@types/common-tags": 1.8.2
-    "@types/jsonfile": 6.1.1
+    "@types/jsonfile": 6.1.4
     "@types/lodash": 4.14.199
     "@types/node": 20.7.2
     "@types/node-cron": 3.0.8
