@@ -311,10 +311,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/common-tags@npm:1.8.2":
-  version: 1.8.2
-  resolution: "@types/common-tags@npm:1.8.2"
-  checksum: a48f69b24538cbf9e7808f98f1cc2f08a59ccd93501aa64acfe9fb692dcffee6de1ca2ae9970c319c16a032fd71195e30defae5834c8061999e1532e199d0c2d
+"@types/common-tags@npm:1.8.4":
+  version: 1.8.4
+  resolution: "@types/common-tags@npm:1.8.4"
+  checksum: 9fad055269bd31eecd910fbf34acb80332b0c21e0fe8fd459df2dec11c183a3da3c96590964289ebd63a39658c23ca4412cc116558cde5a43a2738ff8056d765
   languageName: node
   linkType: hard
 
@@ -4146,7 +4146,7 @@ __metadata:
   resolution: "ovh-availability-checker@workspace:."
   dependencies:
     "@tsconfig/node18-strictest": 1.0.0
-    "@types/common-tags": 1.8.2
+    "@types/common-tags": 1.8.4
     "@types/jsonfile": 6.1.4
     "@types/lodash": 4.14.199
     "@types/node": 20.7.2
