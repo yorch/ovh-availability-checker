@@ -4170,7 +4170,7 @@ __metadata:
     pino-pretty: 10.3.1
     prettier: 3.0.3
     pushbullet: 3.0.0
-    scrape-it: 6.0.1
+    scrape-it: 6.1.0
     simple-sms-sender: 0.1.1
     ts-node: 10.9.2
     typescript: 4.9.5
@@ -4982,16 +4982,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"scrape-it@npm:6.0.1":
-  version: 6.0.1
-  resolution: "scrape-it@npm:6.0.1"
+"scrape-it@npm:6.1.0":
+  version: 6.1.0
+  resolution: "scrape-it@npm:6.1.0"
   dependencies:
     "@types/cheerio": ^0.22.31
     assured: ^1.0.15
     cheerio-req: ^2.0.0
     scrape-it-core: ^1.0.0
     typpy: ^2.3.13
-  checksum: ab5c056eccd3a8350eb9ead14871e52adf75621668a6e023a13f244e3a8d80b491334cf04b7860c699bf4af08f46ac8b11140351b7e50e784f85d0f5e3ef05c5
+  checksum: e005cce410e4c9f84f5e2af01dea4440fdcbce3b2866e8dd76175f01926d7019ac7f181b1381cc5328802ee0a16645c5f0b684253c94e1eea8154116581c101e
   languageName: node
   linkType: hard
 
