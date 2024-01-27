@@ -420,12 +420,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/nodemailer@npm:6.4.9":
-  version: 6.4.9
-  resolution: "@types/nodemailer@npm:6.4.9"
+"@types/nodemailer@npm:6.4.14":
+  version: 6.4.14
+  resolution: "@types/nodemailer@npm:6.4.14"
   dependencies:
     "@types/node": "*"
-  checksum: fd903f38af782c4d3ac0aedc7e6b26bd91bf38183da0027559dfd269e956401114d977a903c69a90897c5b773e76fd9c8f261e787643ca4231edba91f209fa8d
+  checksum: 5f61f01dd736b17f431d1e8b320322f86460604b45df947fc4bc8999d7c7719405e349f7abba86e4fb100a464a30b52615d00dac03d9cb37562ff04487ebd310
   languageName: node
   linkType: hard
 
@@ -3944,10 +3944,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nodemailer@npm:6.9.4":
-  version: 6.9.4
-  resolution: "nodemailer@npm:6.9.4"
-  checksum: 1a61039c9c6041ee9ed423c7fa3685cb300679f1ef8dcfd912fc58d9b8c429c34ac1187eebd4d86baf7158222f6e3a1ea2b4fd2a29630fb9ef0027cef46e90bb
+"nodemailer@npm:6.9.8":
+  version: 6.9.8
+  resolution: "nodemailer@npm:6.9.8"
+  checksum: 6499b93b7070a1b789ec00681ccbbf34180f127f1ce455b28201584b0974086a86be858062d41044df72ed7aba5649a40321a8e926367d2a1dfc0e65b7bf8838
   languageName: node
   linkType: hard
 
@@ -4152,7 +4152,7 @@ __metadata:
     "@types/node": 20.7.2
     "@types/node-cron": 3.0.11
     "@types/node-telegram-bot-api": 0.61.7
-    "@types/nodemailer": 6.4.9
+    "@types/nodemailer": 6.4.14
     "@types/prettier": 3.0.0
     "@types/xo": 0.39.5
     common-tags: 1.8.2
@@ -4164,7 +4164,7 @@ __metadata:
     lodash: 4.17.21
     node-cron: 3.0.3
     node-telegram-bot-api: 0.64.0
-    nodemailer: 6.9.4
+    nodemailer: 6.9.8
     pino: 8.17.2
     pino-dataset-transport: 1.0.1
     pino-pretty: 10.3.1
