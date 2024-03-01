@@ -395,14 +395,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node-telegram-bot-api@npm:0.61.7":
-  version: 0.61.7
-  resolution: "@types/node-telegram-bot-api@npm:0.61.7"
+"@types/node-telegram-bot-api@npm:0.64.3":
+  version: 0.64.3
+  resolution: "@types/node-telegram-bot-api@npm:0.64.3"
   dependencies:
     "@types/node": "*"
     "@types/request": "*"
-    eventemitter3: ">=3.0.0"
-  checksum: e3db96d01d0766b8463f655b0b49ec0a0ff4052e26b9e700d38cf6ae29a030c8da83b5996a6701b7cec2f5ec49b9d9a0ca34422c7c5798c11297c0784129db2c
+  checksum: 278c7eba41c528b802c4c55dc0a8611be8f754252cdf8dd9ca070f7267aa22116a9bcf28af8a670e4fa4ef55c3dca237b91ad89abc70b7e8f7285cc9057a6079
   languageName: node
   linkType: hard
 
@@ -2150,13 +2149,6 @@ __metadata:
   version: 5.0.1
   resolution: "event-target-shim@npm:5.0.1"
   checksum: 1ffe3bb22a6d51bdeb6bf6f7cf97d2ff4a74b017ad12284cc9e6a279e727dc30a5de6bb613e5596ff4dc3e517841339ad09a7eec44266eccb1aa201a30448166
-  languageName: node
-  linkType: hard
-
-"eventemitter3@npm:>=3.0.0":
-  version: 5.0.0
-  resolution: "eventemitter3@npm:5.0.0"
-  checksum: b974bafbab860e0a5bbb21add4c4e82f9d5691c583c03f2e4c5d44a2d6c4556d79223621bdcfc6c8e14366a4af9df6b5ea9d6caf65fbffc80b66f3e1dceacbc9
   languageName: node
   linkType: hard
 
@@ -4153,7 +4145,7 @@ __metadata:
     "@types/lodash": 4.14.199
     "@types/node": 20.11.7
     "@types/node-cron": 3.0.11
-    "@types/node-telegram-bot-api": 0.61.7
+    "@types/node-telegram-bot-api": 0.64.3
     "@types/nodemailer": 6.4.14
     "@types/prettier": 3.0.0
     "@types/xo": 0.39.5
