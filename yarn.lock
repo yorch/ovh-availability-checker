@@ -413,12 +413,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.11.7":
-  version: 20.11.7
-  resolution: "@types/node@npm:20.11.7"
+"@types/node@npm:20.12.3":
+  version: 20.12.3
+  resolution: "@types/node@npm:20.12.3"
   dependencies:
     undici-types: ~5.26.4
-  checksum: 61ea0718bccda31110c643190518407b7c50d26698a20e3522871608db5fa3d2d43d1ae57c609068eae6996d563db43326045a90f22a9aacc825e8d6c7aea2ce
+  checksum: 982544a014391f214d36e5d65d8879f4d3ca9ed2258a5db76b1475a58858b5468ca1c65973e1a3e578f7665ed881af1ff9387d2d3e99e7a4d315994570fc50ff
   languageName: node
   linkType: hard
 
@@ -4151,7 +4151,7 @@ __metadata:
     "@types/common-tags": 1.8.4
     "@types/jsonfile": 6.1.4
     "@types/lodash": 4.14.199
-    "@types/node": 20.11.7
+    "@types/node": 20.12.3
     "@types/node-cron": 3.0.11
     "@types/node-telegram-bot-api": 0.61.7
     "@types/nodemailer": 6.4.14
