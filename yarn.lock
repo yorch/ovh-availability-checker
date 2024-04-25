@@ -4167,7 +4167,7 @@ __metadata:
     node-cron: 3.0.3
     node-telegram-bot-api: 0.64.0
     nodemailer: 6.9.8
-    pino: 8.17.2
+    pino: 9.0.0
     pino-dataset-transport: 1.0.1
     pino-pretty: 10.3.1
     prettier: 3.2.4
@@ -4361,13 +4361,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pino-abstract-transport@npm:v1.1.0":
-  version: 1.1.0
-  resolution: "pino-abstract-transport@npm:1.1.0"
+"pino-abstract-transport@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "pino-abstract-transport@npm:1.2.0"
   dependencies:
     readable-stream: ^4.0.0
     split2: ^4.0.0
-  checksum: cc84caabee5647b5753ae484d5f63a1bca0f6e1791845e2db2b6d830a561c2b5dd1177720f68d78994c8a93aecc69f2729e6ac2bc871a1bf5bb4b0ec17210668
+  checksum: 3336c51fb91ced5ef8a4bfd70a96e41eb6deb905698e83350dc71eedffb34795db1286d2d992ce1da2f6cd330a68be3f7e2748775a6b8a2ee3416796070238d6
   languageName: node
   linkType: hard
 
@@ -4412,24 +4412,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pino@npm:8.17.2":
-  version: 8.17.2
-  resolution: "pino@npm:8.17.2"
+"pino@npm:9.0.0":
+  version: 9.0.0
+  resolution: "pino@npm:9.0.0"
   dependencies:
     atomic-sleep: ^1.0.0
     fast-redact: ^3.1.1
     on-exit-leak-free: ^2.1.0
-    pino-abstract-transport: v1.1.0
+    pino-abstract-transport: ^1.2.0
     pino-std-serializers: ^6.0.0
     process-warning: ^3.0.0
     quick-format-unescaped: ^4.0.3
     real-require: ^0.2.0
     safe-stable-stringify: ^2.3.1
     sonic-boom: ^3.7.0
-    thread-stream: ^2.0.0
+    thread-stream: ^2.6.0
   bin:
     pino: bin.js
-  checksum: fc769d3d7b1333de94d51815fbe2abc4a1cc07cb0252a399313e54e26c13da2c0a69b227c296bd95ed52660d7eaa993662a9bf270b7370d0f7553fdd38716b63
+  checksum: d4d22aa5ab7d1c116c40b694bcc14a38cc9335ff195186933bb9f622784f9dd95d755c454cde420bf971bcda07d3a6013b3a2a4dcb9be43745f9c1a7f86c352c
   languageName: node
   linkType: hard
 
@@ -5341,12 +5341,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"thread-stream@npm:^2.0.0":
-  version: 2.3.0
-  resolution: "thread-stream@npm:2.3.0"
+"thread-stream@npm:^2.6.0":
+  version: 2.7.0
+  resolution: "thread-stream@npm:2.7.0"
   dependencies:
     real-require: ^0.2.0
-  checksum: e9ea58f9f36320165b41c2aae5c439bf68bd3575eb533c458483d8b290e31d519979e351408c7d6e248711611434332c2a3aae2165650b028cc3eb9b1052ac16
+  checksum: 75ab019cda628344c7779e5f5a88f7759764efd29d320327ad2e6c2622778b5f1c43a3966d76a9ee5744086d61c680b413548f5521030f9e9055487684436165
   languageName: node
   linkType: hard
 
