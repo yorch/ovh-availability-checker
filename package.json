@@ -40,7 +40,7 @@
     "@types/lodash": "4.14.199",
     "@types/node": "20.11.7",
     "@types/node-cron": "3.0.11",
-    "@types/node-telegram-bot-api": "0.61.7",
+    "@types/node-telegram-bot-api": "0.64.3",
     "@types/nodemailer": "6.4.14",
     "@types/prettier": "3.0.0",
     "@types/xo": "0.39.5",
