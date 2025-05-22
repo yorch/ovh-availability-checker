@@ -276,10 +276,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsconfig/node18-strictest@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@tsconfig/node18-strictest@npm:1.0.0"
-  checksum: 551f103b0f08cfb01ac22142193964d5cc5f8f077be2cc39ea3c6046161809ec7eef5d2686905ef04fab6fe62011253ce32516943faf72b57a8ac27bd15fa231
+"@tsconfig/node22@npm:22.0.2":
+  version: 22.0.2
+  resolution: "@tsconfig/node22@npm:22.0.2"
+  checksum: b9fb6543856cbac8b9b79c234bbefa3415f083e0a46e6f0fbe418fe21c5d086440222e1383258d75ebac951cbe17564a6d146fafc59c889d6302decd1a7880dd
   languageName: node
   linkType: hard
 
@@ -413,12 +413,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.11.7":
-  version: 20.11.7
-  resolution: "@types/node@npm:20.11.7"
+"@types/node@npm:22.15.21":
+  version: 22.15.21
+  resolution: "@types/node@npm:22.15.21"
   dependencies:
-    undici-types: ~5.26.4
-  checksum: 61ea0718bccda31110c643190518407b7c50d26698a20e3522871608db5fa3d2d43d1ae57c609068eae6996d563db43326045a90f22a9aacc825e8d6c7aea2ce
+    undici-types: ~6.21.0
+  checksum: 989f1ce3a99916a7298ae885210385fbcb339b07f8ef420b015d69dd68863aca68aeae07833736b300720d9394b8e1875600ce74166c24957d9907d29de0b788
   languageName: node
   linkType: hard
 
@@ -4147,11 +4147,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ovh-availability-checker@workspace:."
   dependencies:
-    "@tsconfig/node18-strictest": 1.0.0
+    "@tsconfig/node22": 22.0.2
     "@types/common-tags": 1.8.4
     "@types/jsonfile": 6.1.4
     "@types/lodash": 4.14.199
-    "@types/node": 20.11.7
+    "@types/node": 22.15.21
     "@types/node-cron": 3.0.11
     "@types/node-telegram-bot-api": 0.61.7
     "@types/nodemailer": 6.4.14
@@ -5621,10 +5621,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici-types@npm:~5.26.4":
-  version: 5.26.5
-  resolution: "undici-types@npm:5.26.5"
-  checksum: 3192ef6f3fd5df652f2dc1cd782b49d6ff14dc98e5dced492aa8a8c65425227da5da6aafe22523c67f035a272c599bb89cfe803c1db6311e44bed3042fc25487
+"undici-types@npm:~6.21.0":
+  version: 6.21.0
+  resolution: "undici-types@npm:6.21.0"
+  checksum: 46331c7d6016bf85b3e8f20c159d62f5ae471aba1eb3dc52fff35a0259d58dcc7d592d4cc4f00c5f9243fa738a11cfa48bd20203040d4a9e6bc25e807fab7ab3
   languageName: node
   linkType: hard
 

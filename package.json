@@ -34,11 +34,11 @@
     "simple-sms-sender": "0.1.1"
   },
   "devDependencies": {
-    "@tsconfig/node18-strictest": "1.0.0",
+    "@tsconfig/node22": "22.0.2",
     "@types/common-tags": "1.8.4",
     "@types/jsonfile": "6.1.4",
     "@types/lodash": "4.14.199",
-    "@types/node": "20.11.7",
+    "@types/node": "22.15.21",
     "@types/node-cron": "3.0.11",
     "@types/node-telegram-bot-api": "0.61.7",
     "@types/nodemailer": "6.4.14",
@@ -51,7 +51,7 @@
   },
   "engineStrict": true,
   "engines": {
-    "node": ">= 16.0.0"
+    "node": ">= 22.0.0"
   },
   "packageManager": "yarn@3.5.0",
   "xo": {
