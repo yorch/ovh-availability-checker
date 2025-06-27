@@ -4170,7 +4170,7 @@ __metadata:
     pino: 8.17.2
     pino-dataset-transport: 1.0.1
     pino-pretty: 10.3.1
-    prettier: 3.2.4
+    prettier: 3.6.2
     pushbullet: 3.0.0
     scrape-it: 6.1.0
     simple-sms-sender: 0.1.1
@@ -4499,12 +4499,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:3.2.4":
-  version: 3.2.4
-  resolution: "prettier@npm:3.2.4"
+"prettier@npm:3.6.2":
+  version: 3.6.2
+  resolution: "prettier@npm:3.6.2"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 6ec9385a836e0b9bac549e585101c086d1521c31d7b882d5c8bb7d7646da0693da5f31f4fff6dc080710e5e2d34c85e6fb2f8766876b3645c8be2f33b9c3d1a3
+  checksum: 0206f5f437892e8858f298af8850bf9d0ef1c22e21107a213ba56bfb9c2387a2020bfda244a20161d8e3dad40c6b04101609a55d370dece53d0a31893b64f861
   languageName: node
   linkType: hard
 
