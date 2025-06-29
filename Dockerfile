@@ -11,10 +11,16 @@ COPY . .
 
 RUN yarn build
 
-RUN yarn prod-install out
-RUN mv build out/build
+# Create production installation
+RUN yarn workspaces focus --all --production && \
+    mkdir -p out && \
+    cp package.json yarn.lock .yarnrc.yml out/ && \
+    cp -r .yarn out/ && \
+    cp -r node_modules out/ && \
+    cp -r build out/
 
-RUN rm -rf prod/.yarn/
+# Clean up development files from .yarn
+RUN rm -rf out/.yarn/cache out/.yarn/install-state.gz
 
 ############################################################
 # Final Image
@@ -25,7 +31,7 @@ WORKDIR /app
 
 COPY --from=builder /app/out   .
 
-ENV NODE_ENV production
-ENV LOG_FILES_ENABLE false
+ENV NODE_ENV=production
+ENV LOG_FILES_ENABLE=false
 
 CMD [ "node", "build/index.js" ]
