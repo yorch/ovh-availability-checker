@@ -1,6 +1,6 @@
 import os from 'node:os';
 import path from 'node:path';
-import pino, { type TransportTargetOptions } from 'pino';
+import { pino, type TransportTargetOptions } from 'pino';
 import {
   datasetLogger,
   isProduction,

@@ -17,18 +17,18 @@
   "repository": "yorch/ovh-availability-checker",
   "dependencies": {
     "common-tags": "1.8.2",
-    "dotenv": "16.6.1",
+    "dotenv": "^17.0.0",
     "env-var": "7.5.0",
-    "got": "12.6.1",
+    "got": "^14.0.0",
     "jsonfile": "6.1.0",
     "load-json-file": "7.0.1",
     "lodash": "4.17.21",
-    "node-cron": "3.0.3",
+    "node-cron": "^4.0.0",
     "node-telegram-bot-api": "0.66.0",
-    "nodemailer": "6.10.1",
-    "pino": "8.21.0",
+    "nodemailer": "^7.0.0",
+    "pino": "^9.0.0",
     "pino-dataset-transport": "1.0.1",
-    "pino-pretty": "10.3.1",
+    "pino-pretty": "^13.0.0",
     "pushbullet": "3.0.0",
     "scrape-it": "6.1.5",
     "simple-sms-sender": "0.4.0"
@@ -38,7 +38,7 @@
     "@types/common-tags": "1.8.4",
     "@types/jsonfile": "6.1.4",
     "@types/lodash": "4.17.20",
-    "@types/node": "20.19.4",
+    "@types/node": "^24.0.0",
     "@types/node-cron": "3.0.11",
     "@types/node-telegram-bot-api": "0.64.9",
     "@types/nodemailer": "6.4.17",
@@ -47,7 +47,7 @@
     "prettier": "3.6.2",
     "ts-node": "10.9.2",
     "typescript": "^5.0.0",
-    "xo": "0.54.1"
+    "xo": "^1.0.0"
   },
   "engineStrict": true,
   "engines": {

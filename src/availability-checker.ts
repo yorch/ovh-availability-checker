@@ -5,6 +5,7 @@ import * as cron from 'node-cron';
 import type { Logger } from './logger.js';
 import type {
   Action,
+  Datacenter,
   HardwareAvailability,
   ServerAvailable,
   ServersAvailable,
@@ -80,7 +81,7 @@ export class AvailabilityChecker {
       return;
     }
 
-    this.scheduledTask.stop();
+    void this.scheduledTask.stop();
     this.scheduledTask = undefined;
   }
 
@@ -189,8 +190,9 @@ export class AvailabilityChecker {
     dc: string;
   }) {
     const { availability = '' } =
-      datacentersAvailability?.find(({ datacenter }) => datacenter === dc) ??
-      {};
+      datacentersAvailability?.find(
+        ({ datacenter }) => datacenter === (dc as Datacenter)
+      ) ?? {};
 
     return `${name} (DC: ${dc}): ${cpu}, ${ram}, ${disk} ==> ${price} (availability: ${availability})`;
   }

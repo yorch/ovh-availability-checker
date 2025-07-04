@@ -22,7 +22,7 @@ export const sendPushbullet: Action = async ({ content, logger }) => {
     const pusher = new PushBullet(apiToken);
     const response = await pusher.note(deviceId, noteTitle, content);
     logger.info(`Pushbullet sent!`);
-    logger.debug(`Pushbullet: ${String(response || '')}`);
+    logger.debug(`Pushbullet: ${String(response ?? '')}`);
   } catch (error) {
     logger.error(error, 'Could not send pushbullet');
   }
