@@ -4,7 +4,6 @@
  *
  * More info and obtained from https://dev.to/icyjoseph/filtering-in-typescript-2mbc
  */
-// eslint-disable-next-line @typescript-eslint/ban-types
-export function exists<T>(value: T | null | undefined): value is T {
+export function exists<T>(value: T | undefined): value is T {
   return value === (value ?? !value);
 }
