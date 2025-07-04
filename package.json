@@ -44,7 +44,7 @@
     "@types/nodemailer": "6.4.14",
     "@types/prettier": "3.0.0",
     "@types/xo": "0.39.5",
-    "prettier": "3.2.4",
+    "prettier": "3.6.2",
     "ts-node": "10.9.2",
     "typescript": "4.9.5",
     "xo": "0.54.1"
