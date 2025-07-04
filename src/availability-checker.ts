@@ -1,6 +1,5 @@
 import got from 'got';
-import type { Dictionary } from 'lodash';
-import lodash from 'lodash';
+import lodash, { type Dictionary } from 'lodash';
 import pick from 'lodash/fp/pick.js';
 import * as cron from 'node-cron';
 import type { Logger } from './logger.js';
