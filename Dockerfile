@@ -1,4 +1,4 @@
-FROM node:18-alpine AS builder
+FROM node:24-alpine AS builder
 
 WORKDIR /app
 
@@ -25,7 +25,7 @@ RUN rm -rf out/.yarn/cache out/.yarn/install-state.gz
 ############################################################
 # Final Image
 ############################################################
-FROM node:18-alpine
+FROM node:24-alpine
 
 WORKDIR /app
 
