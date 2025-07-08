@@ -4903,10 +4903,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nodemailer@npm:^7.0.0":
-  version: 7.0.4
-  resolution: "nodemailer@npm:7.0.4"
-  checksum: 10/b8074c83920fedacf776c1bfd655c65c1d85684d7201522798b6aa08a519c132c3ab8dd96659db5855302d0fdf0fb271d3b587dc4a0956a38929c8377f43165d
+"nodemailer@npm:^7.0.5":
+  version: 7.0.5
+  resolution: "nodemailer@npm:7.0.5"
+  checksum: 10/743410eb62d14b7f55bbbd9cba6a97a22de39159be673148d72f1260d30eb2c297b5fca0a28368ff22b08f252ebb19d78d9b23145a6bc2ca6e74f8e9a238f0c3
   languageName: node
   linkType: hard
 
@@ -5133,7 +5133,7 @@ __metadata:
     lodash: "npm:4.17.21"
     node-cron: "npm:^4.0.0"
     node-telegram-bot-api: "npm:0.66.0"
-    nodemailer: "npm:^7.0.0"
+    nodemailer: "npm:^7.0.5"
     pino: "npm:^9.0.0"
     pino-dataset-transport: "npm:1.0.1"
     pino-pretty: "npm:^13.0.0"
