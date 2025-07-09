@@ -637,12 +637,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^24.0.0":
-  version: 24.0.10
-  resolution: "@types/node@npm:24.0.10"
+"@types/node@npm:^24.0.12":
+  version: 24.0.12
+  resolution: "@types/node@npm:24.0.12"
   dependencies:
     undici-types: "npm:~7.8.0"
-  checksum: 10/ff8921c515d72fbc0a11ff282096e2d2e11ac04a2e9c7f765bcec5cb69cd367a88ab5dd556dc162ac98b9212957939b7ae80f12f3fc90db10c82135affd6d120
+  checksum: 10/4dbcd278ce2e0f4516376d1cb2c146ac68d45d4f97c406cc58fac7e63c49545eb97b3acb0d40dbf0d15893158981081da6163c01a16a265dfc3abb34d032f6c1
   languageName: node
   linkType: hard
 
@@ -5118,7 +5118,7 @@ __metadata:
     "@types/common-tags": "npm:1.8.4"
     "@types/jsonfile": "npm:6.1.4"
     "@types/lodash": "npm:4.17.20"
-    "@types/node": "npm:^24.0.0"
+    "@types/node": "npm:^24.0.12"
     "@types/node-cron": "npm:3.0.11"
     "@types/node-telegram-bot-api": "npm:0.64.9"
     "@types/nodemailer": "npm:6.4.17"

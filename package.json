@@ -38,7 +38,7 @@
     "@types/common-tags": "1.8.4",
     "@types/jsonfile": "6.1.4",
     "@types/lodash": "4.17.20",
-    "@types/node": "^24.0.0",
+    "@types/node": "^24.0.12",
     "@types/node-cron": "3.0.11",
     "@types/node-telegram-bot-api": "0.64.9",
     "@types/nodemailer": "6.4.17",
