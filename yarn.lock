@@ -4847,10 +4847,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-cron@npm:^4.0.0":
-  version: 4.2.0
-  resolution: "node-cron@npm:4.2.0"
-  checksum: 10/5ef616a29de2437e60b1e621dc4577622ae6c5455cf9e280bb14acea6ae0aca8e0692a509903cebbed50775d8bd66a58aa52e1a1826012ae8fcf998f29ec2788
+"node-cron@npm:^4.2.1":
+  version: 4.2.1
+  resolution: "node-cron@npm:4.2.1"
+  checksum: 10/7550b105e4aab772597383e24c4b31b6d5dc9604c96bcefb1a4b8a94a432b8835e3010a0dfc1d34492edfb64a2e55f334cf3ad0a76901b72de11ef506cbfd31a
   languageName: node
   linkType: hard
 
@@ -5131,7 +5131,7 @@ __metadata:
     jsonfile: "npm:6.1.0"
     load-json-file: "npm:7.0.1"
     lodash: "npm:4.17.21"
-    node-cron: "npm:^4.0.0"
+    node-cron: "npm:^4.2.1"
     node-telegram-bot-api: "npm:0.66.0"
     nodemailer: "npm:^7.0.0"
     pino: "npm:^9.0.0"
