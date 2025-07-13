@@ -1,0 +1,9 @@
+{
+  "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:0-12",
+  "extensions": [
+    "dbaeumer.vscode-eslint"
+  ],
+  "forwardPorts": [
+    3005
+  ]
+}
