@@ -47,7 +47,7 @@
     "prettier": "3.6.2",
     "ts-node": "10.9.2",
     "typescript": "^5.0.0",
-    "xo": "^1.0.0"
+    "xo": "^1.2.1"
   },
   "engineStrict": true,
   "engines": {
