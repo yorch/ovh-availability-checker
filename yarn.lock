@@ -2075,10 +2075,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:^17.2.0":
-  version: 17.2.0
-  resolution: "dotenv@npm:17.2.0"
-  checksum: 10/73d57d7ed8ae46e45c0b1dea382de3f180e71d20a3a4e10a13a3d5271a08639166e6647bb6dc0fa160ea440a55e85ff9be233150d9037d268c823cb72859d87f
+"dotenv@npm:^17.2.2":
+  version: 17.2.2
+  resolution: "dotenv@npm:17.2.2"
+  checksum: 10/258210c403a426e887f0fb63d1cddb2e7dcc028974a38a4a440411b651b9c588ee4e8605e252d87d15489b3e311d7ba56d588d6cfda1b11bfbf494dd7b3ef2a3
   languageName: node
   linkType: hard
 
@@ -5125,7 +5125,7 @@ __metadata:
     "@types/prettier": "npm:3.0.0"
     "@types/xo": "npm:0.39.9"
     common-tags: "npm:1.8.2"
-    dotenv: "npm:^17.2.0"
+    dotenv: "npm:^17.2.2"
     env-var: "npm:7.5.0"
     got: "npm:^14.0.0"
     jsonfile: "npm:6.1.0"
