@@ -3484,9 +3484,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"got@npm:^14.0.0":
-  version: 14.4.7
-  resolution: "got@npm:14.4.7"
+"got@npm:^14.4.9":
+  version: 14.4.9
+  resolution: "got@npm:14.4.9"
   dependencies:
     "@sindresorhus/is": "npm:^7.0.1"
     "@szmarczak/http-timer": "npm:^5.0.1"
@@ -3499,7 +3499,7 @@ __metadata:
     p-cancelable: "npm:^4.0.1"
     responselike: "npm:^3.0.0"
     type-fest: "npm:^4.26.1"
-  checksum: 10/6864aa8742a30c87ed036d5604482ba546405274295633bbcbc9aa91cbaf3d56b3ccbd58720ff1cdfbcf4dbfb6a551ba98efac9114da120ee0b47bb8f5e2102b
+  checksum: 10/e741b851467ded07d605a2a8687d24febda221b82f311fa563197ae5edf1e4d8ce0c97fa794975ba97afbc6b4d016a58e9b5d674dde95c0462d02b98992b85d2
   languageName: node
   linkType: hard
 
@@ -5127,7 +5127,7 @@ __metadata:
     common-tags: "npm:1.8.2"
     dotenv: "npm:^17.2.0"
     env-var: "npm:7.5.0"
-    got: "npm:^14.0.0"
+    got: "npm:^14.4.9"
     jsonfile: "npm:6.1.0"
     load-json-file: "npm:7.0.1"
     lodash: "npm:4.17.21"
