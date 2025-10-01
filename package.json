@@ -46,7 +46,7 @@
     "@types/xo": "0.39.9",
     "prettier": "3.6.2",
     "ts-node": "10.9.2",
-    "typescript": "^5.0.0",
+    "typescript": "^5.9.3",
     "xo": "^1.0.0"
   },
   "engineStrict": true,
