@@ -1219,13 +1219,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"assured@npm:^1.0.15":
-  version: 1.0.15
-  resolution: "assured@npm:1.0.15"
+"assured@npm:^1.0.16":
+  version: 1.0.16
+  resolution: "assured@npm:1.0.16"
   dependencies:
     noop6: "npm:^1.0.1"
     sliced: "npm:^1.0.1"
-  checksum: 10/852dd4b45ac85ef7d4cbb21b576326a1c3954b446e8b14d192a35bfdf0e7fd4eea2261ed11f066ae377213cb87bd4903b6e50d409fc2c5fb06f41253b0c0fb62
+  checksum: 10/760efade29bb5537df136ee85349eb44ee7c6a6db66d779f38c1883d8934be69c59d3bc1d79ee2cda69d4621b4ea0c63f2fcf70303af24ff085b3d1ae1efaa96
   languageName: node
   linkType: hard
 
@@ -1559,13 +1559,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cheerio-req@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "cheerio-req@npm:2.0.0"
+"cheerio-req@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "cheerio-req@npm:2.0.1"
   dependencies:
     axios: "npm:^1.3.4"
     cheerio: "npm:^1.0.0-rc.12"
-  checksum: 10/47b9767b9f17fcb3b4b1c3a6a9b9f62abb068a2889fcde5c9c9908cd29d51dde6554d073cffb586644be13fdcbc96e5036c9e16e459f81c6fc2a052e43ba362c
+  checksum: 10/80a5bcfb66a180ae6fc73321a4c0ca0f5aa713f1944a96c979979d270eac5c93d89d061e393f67a38219121775788c60c5ee14415646bc4deeddb08ff0094bbe
   languageName: node
   linkType: hard
 
@@ -1583,25 +1583,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cheerio@npm:^1.0.0":
-  version: 1.1.0
-  resolution: "cheerio@npm:1.1.0"
-  dependencies:
-    cheerio-select: "npm:^2.1.0"
-    dom-serializer: "npm:^2.0.0"
-    domhandler: "npm:^5.0.3"
-    domutils: "npm:^3.2.2"
-    encoding-sniffer: "npm:^0.2.0"
-    htmlparser2: "npm:^10.0.0"
-    parse5: "npm:^7.3.0"
-    parse5-htmlparser2-tree-adapter: "npm:^7.1.0"
-    parse5-parser-stream: "npm:^7.1.2"
-    undici: "npm:^7.10.0"
-    whatwg-mimetype: "npm:^4.0.0"
-  checksum: 10/e198dfca087f2646c26b1e7acd2f3b40a35b47270a6c7671433b01d0130707c67dbed8546d9c9ae0f97811cb9f9de7a1d231368de52bce346396d92b92f5b7d5
-  languageName: node
-  linkType: hard
-
 "cheerio@npm:^1.0.0-rc.12, cheerio@npm:^1.0.0-rc.5":
   version: 1.0.0-rc.12
   resolution: "cheerio@npm:1.0.0-rc.12"
@@ -1614,6 +1595,25 @@ __metadata:
     parse5: "npm:^7.0.0"
     parse5-htmlparser2-tree-adapter: "npm:^7.0.0"
   checksum: 10/812fed61aa4b669bbbdd057d0d7f73ba4649cabfd4fc3a8f1d5c7499e4613b430636102716369cbd6bbed8f1bdcb06387ae8342289fb908b2743184775f94f18
+  languageName: node
+  linkType: hard
+
+"cheerio@npm:^1.1.0":
+  version: 1.1.2
+  resolution: "cheerio@npm:1.1.2"
+  dependencies:
+    cheerio-select: "npm:^2.1.0"
+    dom-serializer: "npm:^2.0.0"
+    domhandler: "npm:^5.0.3"
+    domutils: "npm:^3.2.2"
+    encoding-sniffer: "npm:^0.2.1"
+    htmlparser2: "npm:^10.0.0"
+    parse5: "npm:^7.3.0"
+    parse5-htmlparser2-tree-adapter: "npm:^7.1.0"
+    parse5-parser-stream: "npm:^7.1.2"
+    undici: "npm:^7.12.0"
+    whatwg-mimetype: "npm:^4.0.0"
+  checksum: 10/6b654bf5a358d3406eed5a3ae84530bab0d6d2d581d0a92d3c0666c310648d4300a00b11335e15007a35922ad3743931385ef17bec8d67b4fa077f10d1aaf2b5
   languageName: node
   linkType: hard
 
@@ -2126,7 +2126,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"encoding-sniffer@npm:^0.2.0":
+"encoding-sniffer@npm:^0.2.1":
   version: 0.2.1
   resolution: "encoding-sniffer@npm:0.2.1"
   dependencies:
@@ -5139,7 +5139,7 @@ __metadata:
     pino-pretty: "npm:^13.0.0"
     prettier: "npm:3.6.2"
     pushbullet: "npm:3.0.0"
-    scrape-it: "npm:6.1.5"
+    scrape-it: "npm:6.1.12"
     simple-sms-sender: "npm:0.4.0"
     ts-node: "npm:10.9.2"
     typescript: "npm:^5.0.0"
@@ -5940,9 +5940,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"scrape-it-core@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "scrape-it-core@npm:1.0.0"
+"scrape-it-core@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "scrape-it-core@npm:1.0.2"
   dependencies:
     cheerio: "npm:^1.0.0-rc.5"
     err: "npm:^2.1.12"
@@ -5950,20 +5950,19 @@ __metadata:
     iterate-object: "npm:^1.3.4"
     obj-def: "npm:^1.0.9"
     typpy: "npm:^2.3.13"
-  checksum: 10/3b4796ca5fe0b3f0c188732f8dcbd2b7ef1614d5f7b8dfd4e5f3cf7f52baa267a297215310ff403d9e1b8aed4869bff25817b7a972dc1d9c9cf295d0a2c58a93
+  checksum: 10/c26fe1f657e4fc1cde43077abdd48e09acd208ca3e22d2924fcdb99dd19d906723cff7a8496542bd04a2751c4cf855ba3276ebde2e998a596adeedfd6e617fc5
   languageName: node
   linkType: hard
 
-"scrape-it@npm:6.1.5":
-  version: 6.1.5
-  resolution: "scrape-it@npm:6.1.5"
+"scrape-it@npm:6.1.12":
+  version: 6.1.12
+  resolution: "scrape-it@npm:6.1.12"
   dependencies:
-    assured: "npm:^1.0.15"
-    cheerio: "npm:^1.0.0"
-    cheerio-req: "npm:^2.0.0"
-    scrape-it-core: "npm:^1.0.0"
-    typpy: "npm:^2.3.13"
-  checksum: 10/b731be1d8d00411ab26498b3c6ce5c411e492b647b0d3cad5a75fb427ed07d766443d3723f6c01a956156d6eee9360a32d3ab5a78f68db1334c8ff908a96d34a
+    assured: "npm:^1.0.16"
+    cheerio: "npm:^1.1.0"
+    cheerio-req: "npm:^2.0.1"
+    scrape-it-core: "npm:^1.0.2"
+  checksum: 10/032ce1829eb8e8ddf40f1476dcc130f1cb685550ad4ea465b8e0d5c97c1c8ed2142a6573d36673f318aea40e3a253a9245daeb2d34058f5a7722b05cc3958706
   languageName: node
   linkType: hard
 
@@ -6687,10 +6686,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:^7.10.0":
-  version: 7.11.0
-  resolution: "undici@npm:7.11.0"
-  checksum: 10/0066fc1c0a501ba315d20fb3930f4467ab22c262ea1cd43eafb0fd3e8506b064cbcd64ab54f8d2b580240a94792a612d3fc138f3878b304f183dccfac429a782
+"undici@npm:^7.12.0":
+  version: 7.16.0
+  resolution: "undici@npm:7.16.0"
+  checksum: 10/2bb71672b23d3dc0f56f1b7fb6c936e4487a350db46eaafc03f2f9107f99cdf8e51ecdd32e589e2381ef47a64b6369cfb31f328b2c3ea663023aa47bc5258b9e
   languageName: node
   linkType: hard
 
