@@ -1,3 +1,5 @@
+
+
 # OVH Availability Checker
 
 This is a NodeJS application that checks for the availability of OVH / Kimsufi / SoYouStart servers (according to `servers.json` config file) and if they are in stock, it can trigger:
@@ -15,6 +17,8 @@ All the configuration can be made through two files:
 - `servers.json` -> Where you can add the OVH / Kimsufi / SoYouStart servers you want to monitor.
 
 ## Run with NodeJS
+
+Requires Node.js 18.0.0 or higher.
 
 ```bash
 # Install all dependencies:
